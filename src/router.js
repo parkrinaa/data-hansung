@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Shop from './views/Shop.vue'
+import Main from './views/Main.vue'
 import Features from './views/Features';
+import LoginView from './views/LoginView.vue';
 
 Vue.use(Router)
 
@@ -12,18 +13,30 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'EmptyLayout',
+      component: () => import('./views/layout/EmptyLayout.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'login',
+          component: LoginView,
+        },
+      ],
     },
     {
-      path: '/shop',
-      name: 'shop',
-      component: Shop
+      path: '/home',
+      name: 'home',
+      component: Home
     },
     {
       path: '/features',
       name: 'features',
       component: Features
-    }
+    },
+    {
+      path: '/main',
+      name: 'main',
+      component: Main
+    },
   ]
 })

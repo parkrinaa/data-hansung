@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Header />
+    <!-- <Header /> -->
     <router-view />
     <Footer />
   </div>
 </template>
 <script>
-  import Header from '@/components/Header.vue';
+  // import Header from '@/components/Header.vue';
   import Footer from '@/components/Footer.vue';
 
   export default {
@@ -14,7 +14,7 @@
       $.initialize();
     },
     components: {
-      Header,
+      // Header,
       Footer
     }
   }

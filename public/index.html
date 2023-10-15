@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>shop</title>
     <!--===============================================================================================-->
@@ -39,15 +39,16 @@
     <link rel="stylesheet" href="path/to/swiper.css"/>
     <script type="text/javascript" src="path/to/swiper.js"></script>
     <script type="text/javascript" src="path/to/vue.min.js"></script>
+    <script type="text/javascript" src="/public/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="path/to/dist/vue-awesome-swiper.js"></script>
+    <seript src="http://code.jquery.com/jquery-1"></seript>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script type="text/javascript">
       Vue.use(window.VueAwesomeSwiper)
     </script>
@@ -88,6 +89,7 @@
     <script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+    
     <script type="text/javascript">
       $('.block2-btn-addcart').each(function(){
         var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
@@ -102,6 +104,8 @@
           swal(nameProduct, "is added to wishlist !", "success");
         });
       });
+
+      
     </script>
 
     <!--===============================================================================================-->

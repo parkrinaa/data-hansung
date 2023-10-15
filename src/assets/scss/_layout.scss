@@ -1,9 +1,12 @@
+#app{
+  min-width: 320px;
+}
+
 .inner{
   @include setCont(100%, null, block, relative);
   margin: 0 auto;
   min-height: 100%;
   min-width: 320px;
-  padding-top: 60px;
   @include tablet {
     width: 100%;
   }
@@ -30,6 +33,169 @@
     h1{
       @include font(15, 15, $black, 500);
       margin: 0 auto;
+    }
+  }
+}
+
+footer{
+  font-family: 'Pretendard-Regular';
+  padding-bottom: 120px;
+  .s-text8{
+    @include font(14, 20);
+    em{
+      color: $black;
+    }
+  }
+}
+
+
+@keyframes msg {
+  50% {
+      transform: scale(1.1);
+  }
+}
+@keyframes home {
+  50% {
+      transform: translateY(-55px);
+  }
+}
+@keyframes bell {
+  50% {
+      transform: rotate(-10deg);
+  }
+}
+@keyframes clickCircle {
+  100% {
+      opacity: 0;
+  }
+}
+
+.bar {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 9999;
+  bottom: 0;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  &.active {
+    &::after {
+        transform: translateY(0px);
+    }
+    &::before {
+        opacity: 1;
+        width: 35px;
+        height: 35px;
+        animation: clickCircle linear 0.5s forwards;
+    }
+    svg {
+        fill: $yellow;
+        stroke: $yellow;
+    }
+    .msg {
+        animation: msg linear 0.5s alternate;
+        animation-delay: 0.2s;
+        @include bgSvg(icoCap($s_yellow), no-repeat, 50% 50%, 100% auto);
+    }
+    .home .roof,
+    .user .head {
+        animation: home linear 0.5s alternate;
+        animation-delay: 0.2s;
+    }
+    .bell {
+        animation: bell linear 0.5s alternate;
+        animation-delay: 0.2s;
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $yellow;
+    margin: 2px auto 0;
+    transform: translateY(20px);
+    transition: transform 0.2s;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .home,
+  .msg,
+  .user {
+    stroke-width: 15;
+    stroke: #000;
+  }
+  .msg{
+    @include setCont(23px, 23px, block);
+    @include bgSvg(icoCap($s_black), no-repeat, 50% 50%, 100% auto);
+    margin-bottom: 5px;
+  }
+  &.button {
+    width: 55px;
+    height: 55px;
+    padding: 18px;
+    background-color: $yellow;
+    border-radius: 50%;
+    transform: translateY(-20px);
+    transition: 0.5s;
+    position: relative;
+    &.active {
+      background-color: $yellow;
+      svg {
+        stroke-width: 15;
+        stroke: #fff;
+        fill: white;
+      }
+      .tag {
+        top: 20px;
+        transform: translate(44px, -64px) scale(1) rotate(90deg);
+      }
+      .heart {
+        top: 20px;
+        transform: translate(90px, -110px) scale(1) rotate(45deg);
+      }
+    }
+    &::after,
+    &::before {
+      display: none;
+    }
+    svg {
+      stroke-width: 15;
+      stroke: #fff;
+      fill: white;
+    }
+    &.tag,
+    &.heart {
+        background-color: $yellow;
+        transition: transform 0.5s;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        transform: translate(0, 0) scale(0) rotate(0deg);
     }
   }
 }

@@ -1,7 +1,8 @@
 h2.tit{
-  @include font(15, 17, $black, 500);
+  @include font(18, 23, $black, 500);
   &.large{
-    @include font(18, 22, $black, 600);
+    @include font(20, 30);
+    font-family: 'Pretendard-SemiBold';
     .txt_point_line{
       @include font(23, 23, $black, 600);
     }
@@ -53,6 +54,8 @@ button, a {
   flex-shrink: 0;
 }
 .btn, a.btn {
+  @include font(17, 17);
+  font-family: 'Pretendard-Regular';
   line-height: 1;
   color: $white;
   font-weight: 600;
@@ -82,9 +85,9 @@ button, a {
     @include font(16, 19);
   }
   &.btn_arrow{
-    @include font(10, 10, #9E9E9E, 400);
+    @include font(12, 12, #9E9E9E, 400);
     display: flex;
-    align-items: center;
+    align-items: baseline;
     background: transparent;
     padding: 0;
     &:after{
@@ -101,16 +104,18 @@ button, a {
   background: linear-gradient(to top, #FEDE82 50%, transparent 50%);
 }
 .a_top{
+  @include font(18, 20);
+  font-family: 'Pretendard-SemiBold';
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 35px 0 10px 0; 
   .ui.fluid.dropdown{
     width: calc(100% - 150px);
   }
 }
 .area{
-  padding: 20px 15px;
+  padding: 25px;
   border-bottom: 7px solid #EDEDED;
   &:last-child{
     border-bottom : 0;
@@ -141,108 +146,111 @@ button, a {
     }
   }
   &.animate__delay-1s{
-    animation-delay: 0.5s
+    animation-delay: 0.3s
   }
   &.animate__delay-2s{
-    animation-delay: 1s
+    animation-delay: 0.8s
   }
 }
 .bx_lecture_list{
-  @include setCont(100%, 65px, block, relative);
-  box-shadow: 0 0 10px rgba(67,67,67,0.1);
-  border-radius: 5px;
-  margin-bottom: 15px;
+  @include setCont(100%, 280px, block, relative);
+  box-shadow: 0 0 20px rgba(67,67,67,0.2);
   background-color: $white;
-  &:before{
-    @include setCont(3px, 35px, block, absolute);
-    background-color: #FEDE82;
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+  margin-bottom: 30px;
   a{
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 15px 13px;
+    .img{
+      @include blind;
+    }
     .tit{
-      @include font(15, 15, $black, 600);
+      @include font(18, 20, $black);
+      font-family: 'Pretendard-SemiBold';
       display: flex;
       align-items: center;
-      span{
+      &::after{
         @include setCont(47px, 18px, flex, relative);
         @include font(12, 12, $black, 500);
+        content: 'HOT';
+        background: rgb(254,222,130);
+        background: linear-gradient(90deg, rgba(254,222,130,1) 0%, rgba(251,159,130,1) 100%);
         border-radius: 10px;
         align-items: center;
         justify-content: center;
         margin-left: 5px;
-        &.hot{
-          display: none;
-          background: rgb(254,222,130);
-          background: linear-gradient(90deg, rgba(254,222,130,1) 0%, rgba(251,159,130,1) 100%);
-        }
-        &.best{
-          display: none;
+      }
+    }
+    .tit_sub{
+      @include font(16, 22, #9E9E9E, 400);
+      letter-spacing : -1px;
+      font-family: 'Pretendard-Medium';
+      text-align: left;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      margin-top: 7px;
+    }
+    &.one{
+      .img{
+        @include setCont(196px, 136px, block, relative);
+        @include bg("/uiux_list.svg", no-repeat, 50% 50%, 100% auto);
+      }
+    }
+    &.two{
+      background-color: #FDD549;
+      .img{
+        @include setCont(136px, 136px, block, relative);
+        @include bg("/graphic_list.svg", no-repeat, 50% 50%, 100% auto);
+      }
+      .tit{
+        &::after{
+          content: 'BEST';
           background: rgb(151,255,164);
           background: linear-gradient(90deg, rgba(151,255,164,1) 9%, rgba(74,218,39,1) 100%);
         }
       }
-    }
-    .tit_sub{
-      @include font(10, 10, #9E9E9E, 400);
-      margin-top: 7px;
-    }
-  }
-  &:nth-of-type(1){
-    a{
-      .tit{
-        span{
-          &.hot{
-            display: flex;
-          }
-        }
+      .tit_sub{
+        color: #585858;
       }
     }
-  }
-  &:nth-of-type(2){
-    a{
+    &.three{
+      display: block;
+      background-color: #000;
+      .img{
+        @include setCont(136px, 136px, block, relative);
+        @include bg("/3d_list.svg", no-repeat, 50% 50%, 100% auto);
+      }
       .tit{
-        span{
-          &.hot{
-            display: flex;
-          }
-        }
+        color: $white;
+      }
+      .tit_sub{
+        color: #9E9E9E;
       }
     }
-  }
-  &:nth-of-type(3){
-    a{
+    &.four{
+      display: block;
+      background-color: #AA8FFF;
+      .img{
+        @include setCont(160px, 156px, block, relative);
+        @include bg("/motion_list.svg", no-repeat, 50% 50%, 100% auto);
+      }
       .tit{
-        span{
-          &.best{
-            display: flex;
-          }
-        }
+        color: $white;
+      }
+      .tit_sub{
+        color: $white;
       }
     }
-  }
-  &:nth-of-type(6){
-    a{
-      .tit{
-        span{
-          &.best{
-            display: flex;
-          }
-        }
-      }
-    }
-  }
-  &:nth-of-type(7){
-    a{
-      .tit{
-        span{
-          &.best{
-            display: flex;
-          }
-        }
+    &.five{
+      display: block;
+      .img{
+        @include setCont(160px, 156px, block, relative);
+        @include bg("/package_list.svg", no-repeat, 50% 50%, 100% auto);
       }
     }
   }
@@ -250,15 +258,16 @@ button, a {
 .search_bar{
   position: relative;
   &:before{
-    @include setCont(18px, 18px, inline-block, absolute);
+    @include setCont(20px, 20px, inline-block, absolute);
     @include bgSvg(icoSearch($s_black), no-repeat, 50% 50%, 100% auto);
     background-color: $white;
     right: 15px;
-    top: 13px;
+    top: 18px;
     z-index: 10;
   }
   .ipt{
-    @include setCont(100%, 45px, block, relative);
+    @include setCont(100%, 55px, block, relative);
+    background-color: $white;
     box-shadow: 0 0 10px rgba(67,67,67,0.1);
     border: none;
     border-radius: 10px;
@@ -266,34 +275,40 @@ button, a {
   }
 }
 .visual{
-  @include setCont(100%, 117px, flex, relative);
+  @include setCont(100%, auto, flex, relative);
+  flex-direction: column;
   align-items: center;
-  padding: 0px 15px;
-  background-color: $yellow;
   .left{
-    @include setCont(96px, 96px, block, relative);
-    @include bg("/uiux_detail_img.svg", no-repeat, 50% 50%, 100% auto);
     @include blind;
-    min-width: 96px;
-    margin-right: 15px;
   }
   .right{
     h2{
-      @include font(20, 20, $black, 600);
-      margin-bottom: 8px;
+      @include font(22, 22, $black, 600);
+      font-family: 'Pretendard-Bold';
+      margin: 40px 0 15px;
+      text-align: center;
     }
     p{
-      @include font(8, 12, $black, 400);
+      @include font(16, 20, $black, 400);
+      text-align: justify;
+      font-family: 'Pretendard-Medium';
     }
   }
 }
+
 .area_bx_infor{
-  padding: 20px 15px;
+  .large{
+    b{
+      @include font(23, 20, $yellow, 400);
+      font-family: 'Pretendard-Bold';
+    }
+  }
   .bx_infor{
     @include setCont(100%, 106px, block, relative);
-    box-shadow: 0px 0px 10px rgba(67,67,67,0.1);
+    box-shadow: 0px 0px 20px rgba(247 , 199, 0, 0.4);
     margin-top: 20px;
     text-align: center;
+    border-radius: 10px;
     .col{
       margin: 23px 0;
       &:nth-child(2){
@@ -301,31 +316,38 @@ button, a {
         border-right: 1px solid #EBEBEB;
       }
       span{
-        @include font(13, 13, #6c6c6c, 400);
+        @include font(15, 15, #6c6c6c, 400);
         display: block;
         margin-bottom: 18px;
       }
       strong{
-        @include font(13, 13, $black, 600);
+        @include font(15, 15, $black);
+        font-family: 'Pretendard-Medium';
         b{
-          @include font(30, 30, $black, 600);
+          @include font(30, 30, $yellow);
+          font-family: 'Pretendard-Bold';
         }
       }
     }
   }
 }
+
+
 .bx_filt{
+  margin: 20px 0;
   .btns{
     display: flex;
     align-items: center;
     .btn{
       @include setCont(64px, auto, block, relative);
       @include font(12, 12, $black, 400);
+      font-family: 'Pretendard-Medium';
       background: #F9F3E5;
       padding: 9px 0;
       margin-right: 5px;
       &.on{
         background: #FEDE82;
+        font-family: 'Pretendard-SemiBold';
       }
     }
   }
@@ -334,7 +356,7 @@ button, a {
 .bx_subject_item{
   @include setCont(100%, 112px, block, relative);
   box-shadow: 0px 0px 10px rgba(67,67,67,0.1);
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 15px;
   a{
     width: 100%;
@@ -346,12 +368,14 @@ button, a {
       border-bottom: 1px solid #EBEBEB;
       padding-bottom: 15px;
       h3{
-        @include font(15, 15, $black, 600);
+        @include font(16, 16, $black);
+        font-family: 'Pretendard-SemiBold';
       }
     }
     .area_subject_cont{
       span{
-        @include font(10, 10, $dis, 400);
+        @include font(14, 14, $dis, 400);
+        font-family: 'Pretendard-Medium';
       }
     }
   }
@@ -360,8 +384,10 @@ button, a {
   display: flex;
   align-items: center;
   height: 15px;
+  margin-bottom: 2px;
   li{
-    @include font(10, 10, $dis, 400);
+    @include font(14, 14, $dis, 400);
+    font-family: 'Pretendard-Medium';
     margin-right: 7px;
     &.grades{
       display: flex;
@@ -386,24 +412,29 @@ button, a {
   }
 } 
 .bx_review{
-  @include setCont(100%, 86px, flex, relative);
   box-shadow: 0px 0px 10px rgba(67,67,67,0.1);
   border-radius: 5px;
   margin-top: 10px;
   text-align: center;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 15px;
   flex-grow: 1;
   .scope{
-    flex-grow: 1;
+    @include setCont(72px, 11px, block, relative);
+    @include bgSvg(icoFiveStar(), no-repeat, 50% 50%, 100% auto);
     @include blind;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    flex-grow: 1;
   }
   p{
-    @include font(12, 12, $black, 400);
+    @include font(15, 18, $black);
+    font-family: 'Pretendard-Medium';
     flex-grow: 1;
   }
   span{
-    @include font(8, 8, $dis, 400);
+    @include font(14, 14, $dis, 400);
+    font-family: 'Pretendard-Medium';
     flex-grow: 1;
   }
 }
@@ -457,4 +488,57 @@ button, a {
       }
     }
   }
+}
+
+.header-wrapicon2{
+  @include setCont(61px, 61px, block, relative);
+  @include bg("/cart.png", no-repeat, 50% 50%, 100% auto);
+  img{
+    @include setCont(60px, 60px, block, relative);
+    margin: 0 auto;
+    opacity: 0;
+  }
+}
+
+.bx_profile{
+  display: flex;
+  .img{
+    @include setCont(66px, 66px, block, relative);
+    @include bg("/parkwon.png", no-repeat, 50% 50%, 100% auto);
+    @include blind;
+  }
+  .right{
+    h2{
+      @include font(12, 12, $black, 500);
+    }
+  }
+}
+
+.typing-demo{
+  @include font(18, 18);
+  font-family: 'Pretendard-SemiBold';
+  position: relative;
+  bottom: 0;
+  right: 5px;
+
+  width: 25ch;
+  animation: typing 2.5s steps(35),  step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.red {
+  color: red;
 }

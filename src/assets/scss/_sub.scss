@@ -39,19 +39,151 @@
   }
 }
 .detail{
+  .area{
+    padding: 25px;
+    .visual{
+      padding: 40px 25px 30px 25px;
+    }
+  }
   .area_subject_cont{
     width: 100%;
     .subject_cont{
       margin-top: 10px;
     }
   }
+  &.uiuxdesign{
+    .visual{
+      .left{
+        @include setCont(231px, 149px, block, relative);
+        @include bg("/uiux_list.svg", no-repeat, 50% 50%, 100% auto);
+        @include blind;
+        min-width: 96px;
+        margin-right: 15px;
+      }
+    }
+    // .area_bx_infor{
+    //   .large{
+    //     b{
+    //       @include font(23, 20, #7D55E0, 400);
+    //       font-family: 'Pretendard-Bold';
+    //     }
+    //   }
+    //   .bx_infor{
+    //     box-shadow: 0px 0px 20px rgba(137 , 90, 232 ,0.2);
+    //     strong{
+    //       color: #7D55E0;
+    //       b{
+    //         color: #7D55E0;
+    //       }
+    //     }
+    //   }
+    // }
+    // .bx_filt{
+    //   .btns{
+    //     .btn{
+    //       background-color:rgba(137 , 90, 232 ,0.2);
+    //       &.on{
+    //         color: $white;
+    //         background-color: #7D55E0;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+  &.graphicdesign{
+    .visual{
+      .left{
+        @include setCont(160px, 160px, block, relative);
+        @include bg("/graphic_list.svg", no-repeat, 50% 50%, 100% auto);
+        @include blind;
+        min-width: 96px;
+        margin-right: 15px;
+      }
+    }
+    .area_bx_infor{
+      .large{
+        b{
+          // @include font(23, 20, #577AE8, 400);
+          font-family: 'Pretendard-Bold';
+        }
+      }
+      // .bx_infor{
+      //   box-shadow: 0px 0px 20px rgba(87 , 122, 232 ,0.2);
+      //   strong{
+      //     color: #577AE8;
+      //     b{
+      //       color: #577AE8;
+      //     }
+      //   }
+      // }
+    }
+    .bx_filt{
+      .btns{
+        .btn{
+          // background-color:rgba(87 , 122, 232 ,0.2);
+          &.on{
+            // color: $white;
+            // background-color: #577AE8;
+          }
+        }
+      }
+    }
+  }
+  &.threedesign{
+    .visual{
+      .left{
+        @include setCont(160px, 179px, block, relative);
+        @include bg("/3d_list.svg", no-repeat, 50% 50%, 100% auto);
+        @include blind;
+        min-width: 96px;
+        margin-right: 15px;
+      }
+    }
+  }
+  &.animator{
+    .visual{
+      .left{
+        @include setCont(193px, 179px, block, relative);
+        @include bg("/motion_list.svg", no-repeat, 50% 50%, 100% auto);
+        @include blind;
+        min-width: 96px;
+        margin-right: 15px;
+      }
+      .right{
+        h2{
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  &.package{
+    .visual{
+      .left{
+        @include setCont(208px, 147px, block, relative);
+        @include bg("/package_list.svg", no-repeat, 50% 50%, 100% auto);
+        @include blind;
+        min-width: 96px;
+        margin-right: 15px;
+      }
+    }
+  }
 }
 .course{
+  .a_top{
+    margin-top: 0;
+  }
   .visual{
     display: block;
     height: auto;
     padding: 0;
     background-color: transparent;
+    .right{
+      p{
+        @include font(16, 20, $black, 400);
+        text-align: justify;
+        font-family: 'Pretendard-Medium';
+      }
+    }
   }
   .subject_cont{
     margin: 8px 0 28px 0;
@@ -219,4 +351,349 @@
       }
     }
   }
+}
+
+.take{
+  .bx_alltake{
+    display: none;
+  }
+  .bx_onetake{
+    display: none;
+  }
+  .bx_twotake{
+    display: none;
+  }
+  .bx_threetake{
+    display: none;
+  }
+}
+.take.alltake {
+  display: block;
+  .bx_onetake{
+    display: none;
+  }
+  .bx_twotake{
+    display: none;
+  }
+  .bx_threetake{
+    display: none;
+  }
+}
+.take.onetake {
+  .take{
+    display: none;
+  }
+  .bx_alltake{
+    display: none;
+  }
+  .bx_onetake{
+    display: block;
+  }
+  .bx_twotake{
+    display: none;
+  }
+  .bx_threetake{
+    display: none;
+  }
+}
+.take.twotake {
+  .take{
+    display: none;
+  }
+  .bx_alltake{
+    display: none;
+  }
+  .bx_onetake{
+    display: none;
+  }
+  .bx_twotake{
+    display: block;
+  }
+  .bx_threetake{
+    display: none;
+  }
+}
+.take.threetake {
+  .take{
+    display: none;
+  }
+  .bx_alltake{
+    display: none;
+  }
+  .bx_onetake{
+    display: none;
+  }
+  .bx_twotake{
+    display: none;
+  }
+  .bx_threetake{
+    display: block;
+  }
+}
+a {
+  transition:all 200ms;
+}
+// 2D컴퓨터그래픽
+.twod{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(1){
+        display: block;
+      }
+    }
+   } 
+}
+// gui
+.gui{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(2){
+        display: block;
+      }
+    }
+   } 
+}
+// HCI개론(인터렉션디자인 이해)
+.hci{
+ .newproduct{
+  .course{
+    display: none;
+    &:nth-of-type(3){
+      display: block;
+    }
+  }
+ } 
+}
+// UX디자인 사례분석
+.uxdesign{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(4){
+        display: block;
+      }
+    }
+   } 
+}
+// 기초입체디자인
+.basicstere{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(5){
+        display: block;
+      }
+    }
+   } 
+}
+// 모션그래픽
+.motion{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(6){
+        display: block;
+      }
+    }
+   } 
+}
+// 미디어스토리텔링 디자인
+.mediastory{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(7){
+        display: block;
+      }
+    }
+   } 
+}
+// 브랜드디자인
+.branddesign{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(8){
+        display: block;
+      }
+    }
+   } 
+}
+// 브랜드전략
+.brandstrategy{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(9){
+        display: block;
+      }
+    }
+   } 
+}
+// 사용자경험 프로토타이핑
+.prototyping{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(10){
+        display: block;
+      }
+    }
+   } 
+}
+// 사진촬영 스튜디오
+.photography{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(11){
+        display: block;
+      }
+    }
+   } 
+}
+// 영상촬영 스튜디오
+.videography{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(12){
+        display: block;
+      }
+    }
+   } 
+}
+// 인포메이션디자인
+.information{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(13){
+        display: block;
+      }
+    }
+   } 
+}
+// 타이포그래피
+.typography{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(14){
+        display: block;
+      }
+    }
+   } 
+}
+// 편집디자인 종합설계
+.designeditor{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(15){
+        display: block;
+      }
+    }
+   } 
+}
+// 3D컴퓨터그래픽
+.threed{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(16){
+        display: block;
+      }
+    }
+   } 
+}
+// UX 디자인 방법론
+.methodology{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(17){
+        display: block;
+      }
+    }
+   } 
+}
+// 기초평면디자인
+.basicplane{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(18){
+        display: block;
+      }
+    }
+   } 
+}
+// 레이아웃 디자인
+.layoutdesign{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(19){
+        display: block;
+      }
+    }
+   } 
+}
+// 서비스경험디자인
+.serviceexperience{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(20){
+        display: block;
+      }
+    }
+   } 
+}
+// 디자인매니지먼트
+.management{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(21){
+        display: block;
+      }
+    }
+   } 
+}
+// 패키지디자인
+.package{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(22){
+        display: block;
+      }
+    }
+   } 
+}
+// 소셜비즈니스 마케팅
+.socialbusiness{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(23){
+        display: block;
+      }
+    }
+   } 
+}
+// 영상디자인기초
+.videodesign{
+  .newproduct{
+    .course{
+      display: none;
+      &:nth-of-type(24){
+        display: block;
+      }
+    }
+   } 
 }

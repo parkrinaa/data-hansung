@@ -34,21 +34,26 @@
     font-family: $nm;
     font-weight: $weight;
     font-display: block;
-    src: local("※"), url($font_url + $fileNm + ".woff") format("woff");
+    src: local("※"), url($font_url + $fileNm + ".woff2") format("woff2"),
+      local("※"), url($font_url + $fileNm + ".woff") format("woff");
   }
 }
 
 @mixin fontfamily($weight: 400, $name: null) {
-  @if $name == "mont" {
-    font-family: "Montserrat";
+  @if $name == "Pretendard-Medium" {
+    font-family: "Pretendard-Medium";
   }@else {
     font-family: $family;
   }
   font-weight: $weight;
 }
 
-@mixin montfont($weight: 400) {
-  font-family: "Montserrat";
+@mixin preten-m($weight: 400) {
+  font-family: "Pretendard-Medium";
+  font-weight: $weight;
+} 
+@mixin preten-b($weight: 500) {
+  font-family: "Pretendard-Bord";
   font-weight: $weight;
 } 
 

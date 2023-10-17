@@ -10,7 +10,7 @@
         class="swiper"
         :options="swiperOption"
         >
-        <swiper-slide class="animate__animated animate__fadeInDown animate__faster">
+        <swiper-slide>
           <router-link :to="{name: 'DetailView'}">
             <dl class="bx_list cap">
               <dt>BEST1</dt>
@@ -19,7 +19,7 @@
             </dl>
           </router-link>
         </swiper-slide>
-        <swiper-slide class="animate__animated animate__fadeInDown animate__faster animate__delay-1s">
+        <swiper-slide>
           <router-link :to="{name: 'DetailView'}">
             <dl class="bx_list file">
               <dt>BEST2</dt>
@@ -28,7 +28,7 @@
             </dl>
           </router-link>
         </swiper-slide>
-        <swiper-slide class="animate__animated animate__fadeInDown animate__faster animate__delay-2s">
+        <swiper-slide>
           <router-link :to="{name: 'DetailView'}">
             <dl class="bx_list trophy">
               <dt>BEST3</dt>
@@ -106,14 +106,14 @@ export default {
       swiperOption: {
         effect: "coverflow",
         slidesPerView: 1.3,
-        spaceBetween : 20,
+        spaceBetween : 10,
         centeredSlides: true,
         initialSlide: 1,
         coverflowEffect: {
           rotate: 50, 
           stretch: 0, 
-          depth: 100, 
-          modifier: 1, 
+          depth: 300, 
+          modifier: 1,
           slideShadows: false, 
         },
         autoplay : {

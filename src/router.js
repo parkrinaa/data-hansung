@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './views/Main.vue'
-// import Features from './views/Features';
+import Features from './views/Features';
 import LoginView from './views/LoginView.vue';
 import Introduct from './views/Introduct.vue';
 import Rpl from './views/Rpl.vue';
@@ -12,6 +12,7 @@ import DetailUiux from './views/detail/DetailUiux.vue';
 import Detail3d from './views/detail/Detail3d.vue';
 import Animator from './views/detail/Animator.vue';
 import Packagedesigner from './views/detail/Packagedesigner.vue';
+import Department from './views/detail/Department.vue';
 // 장바구니
 import Uxdesign from './views/cartpage/Uxdesign.vue'
 import Hci from './views/cartpage/Hci.vue'
@@ -205,6 +206,11 @@ export default new Router({
           name: 'packagedesigner',
           component: Packagedesigner
         },
+        {
+          path: '/department',
+          name: 'department',
+          component: Department
+        },
         // 메인
         {
           path: '/main',
@@ -227,6 +233,12 @@ export default new Router({
           name: 'faculty',
           component: Faculty
         },
+        {
+          path: '/features',
+          name: 'features',
+          component: Features
+        },
+        
       ],
     },
   ]

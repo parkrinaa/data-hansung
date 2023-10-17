@@ -3,10 +3,10 @@
     <div class="inner detail graphicdesign">
       <div class="area pd0">
         <div class="visual">
-          <div class="left">그래픽 디자이너 이미지</div>
+          <div class="left animate__animated animate__fadeInDown">그래픽 디자이너 이미지</div>
           <div class="right">
-            <h2>그래픽 디자이너</h2>
-            <p>그래픽 디자이너란 어떤 메시지의 시각적 전달을 목적으로 한 시각 디자인 중에서 주로 인쇄물 등을 위한 평면적 표현의 인쇄기술을 적용하여 다양한 제품에 문양을 그리거나 광고, 패키지, 책표지, 카탈로그 등을 창작 및 제작하는 데 관련된 업무를 수행하는 사람이다.</p>
+            <h2 class="animate__animated animate__fadeInDown">그래픽 디자이너</h2>
+            <p class="animate__animated animate__fadeInDown">그래픽 디자이너란 어떤 메시지의 시각적 전달을 목적으로 한 시각 디자인 중에서 주로 인쇄물 등을 위한 평면적 표현의 인쇄기술을 적용하여 다양한 제품에 문양을 그리거나 광고, 패키지, 책표지, 카탈로그 등을 창작 및 제작하는 데 관련된 업무를 수행하는 사람이다.</p>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@
             <!-- 전공기초 -->
             <div class="area_bx_subject bx_twotake">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'main'}">
+                <router-link :to="{name: 'twod'}">
                   <div class="subject_top">
                     <h3>2D컴퓨터그래픽</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -170,7 +170,7 @@
             <!-- 전공선택 -->
             <div class="area_bx_subject bx_threetake">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'hci'}">
+                <router-link :to="{name: 'threed'}">
                   <div class="subject_top">
                     <h3>3D컴퓨터그래픽</h3>
                     <button class="btn btn_arrow">더보기</button>

@@ -100,34 +100,6 @@
         margin-right: 15px;
       }
     }
-    .area_bx_infor{
-      .large{
-        b{
-          // @include font(23, 20, #577AE8, 400);
-          font-family: 'Pretendard-Bold';
-        }
-      }
-      // .bx_infor{
-      //   box-shadow: 0px 0px 20px rgba(87 , 122, 232 ,0.2);
-      //   strong{
-      //     color: #577AE8;
-      //     b{
-      //       color: #577AE8;
-      //     }
-      //   }
-      // }
-    }
-    .bx_filt{
-      .btns{
-        .btn{
-          // background-color:rgba(87 , 122, 232 ,0.2);
-          &.on{
-            // color: $white;
-            // background-color: #577AE8;
-          }
-        }
-      }
-    }
   }
   &.threedesign{
     .visual{
@@ -207,16 +179,23 @@
   }
 }
 
-.introduct{
+.department{
   h2{
-    margin-bottom: 10px;
+    @include font(19, 21, $black, 400);
+    font-family: 'Pretendard-SemiBold';
+    margin-bottom: 20px;
   }
   p{
-    @include font(12, 15, $black, 400);
+    @include font(16, 23, $black, 400);
+    font-family: 'Pretendard-Medium';
+    text-align: justify;
     +p{
       margin-top: 15px;
     }
   }
+}
+
+.introduct{
   .animate__delay-1s{
     animation-delay: 0.2s
   }
@@ -277,15 +256,17 @@
 
 .rpl{
   h2{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   p{
-    @include font(12, 15, $black, 400);
+    @include font(16, 23, $black, 400);
+    font-family: 'Pretendard-Medium';
   }
   .circle{
     margin-top: 15px;
     li{
-      @include font(12, 15, $black, 400);
+      @include font(14, 19, $black, 400);
+      font-family: 'Pretendard-Regular';
       list-style:disc;
       margin-left: 15px;
     }
@@ -318,24 +299,30 @@
         }
       }
       dt{
-        @include font(12, 12, $black, 600);
+        @include font(15, 19, $black, 400);
+        font-family: 'Pretendard-SemiBold';
         margin-bottom: 5px;
       }
       dd{
-        @include font(10, 12, $black, 400);
+        @include font(14, 18, $dark_gray, 400);
+        font-family: 'Pretendard-Medium';
         margin-bottom: 3px;
       }
       .btn{
-        @include font(13, 13, $white, 400);
+        @include font(15, 15, $white, 400);
+        font-family: 'Pretendard-SemiBold';
         padding: 10px 23px;
         margin-top: 11px;
       }
       p{
-        @include font(12, 12, $black, 600);
+        @include font(15, 19, $black, 400);
+        font-family: 'Pretendard-SemiBold';
         margin-bottom: 10px;
       }
       .dl_check{
         dt{
+          @include font(15, 21, $dark_gray, 400);
+          font-family: 'Pretendard-Medium';
           display: flex;
           align-items: center;
           &:before{
@@ -345,8 +332,42 @@
           }
         }
         dd{
-          @include font(10, 13, #6C6C6C, 400);
+          @include font(14, 21, $dark_gray, 400);
+          font-family: 'Pretendard-Medium';
           margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.faculty{
+  h2{
+    @include font(19, 21, $black);
+    font-family: 'Pretendard-SemiBold';
+    margin-bottom: 10px;
+  }
+  .swiper-slide{
+    background-color: $white;
+    height: 108px;
+    margin: 10px 0;
+    .bx_subject_item{
+      margin: 0;
+      height: 105px;
+      a{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        .subject_top{
+          h3{
+            width: 80%;
+            text-align: left;
+            @include ellipsis(2);
+          }
+        }
+        .subject_cont{
+          justify-content: space-between;
         }
       }
     }
@@ -696,4 +717,147 @@ a {
       }
     }
    } 
+}
+
+
+
+.tab_wrap{
+  @include font(15, 15);
+  font-family: 'Pretendard-SemiBold';
+  display: flex;
+  justify-content: space-between;
+  overflow:hidden;
+  width:100%;
+  margin:0 auto;
+  // border-bottom:1px solid #cdcdcd;
+}
+.tab_wrap input{
+  display:none;
+}
+.tab_wrap label{
+  width: 33.3%;
+  height:45px;
+  color: #9E9E9E;
+  line-height:45px;
+  text-align:center;
+  margin-bottom: 0;
+  border-bottom: 3px solid #EBEBEB;
+}
+.tab_wrap label.on{
+  color:$black;
+  border-bottom: 3px solid $yellow;
+}
+.tab_content{
+  display:none;
+  width:100%;
+  margin:0 auto;
+}
+.tab_content1{
+  display:block;
+}
+
+.features{
+  h1{
+    @include font(25, 25, $black);
+    font-family: 'Pretendard-Bold';
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .f_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2.tit{
+    @include font(18, 18, $black);
+    font-family: 'Pretendard-SemiBold';
+    display: inline-block;
+  }
+  .area_bx_infor{
+    .bx_infor{
+      box-shadow: 0px 0px 7px 3px rgba(235, 235, 235, 0.8);
+      strong{
+        b{
+          color: $black;
+        }
+      }
+    }
+  }
+  
+  .table-shopping-cart{
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 7px 3px rgba(235, 235, 235, 0.3);
+    .table-head{
+      background-color: rgba(254, 222, 130, 0.8);
+      th{
+        @include font(15, 17);
+        font-family: 'Pretendard-SemiBold';
+        padding: 10px;
+        width: 25%;
+        text-align: center;
+        &.b-radi-left{
+          width: 50%;
+          border-radius: 5px 0 0 0;
+        }
+        &.b-radi-right{
+          border-radius: 0 5px 0 0;
+        }
+      }
+    }
+    .table-row{
+      display: table-row!important;
+      position: relative;
+      width: 100%;
+      border: none;
+      td{
+        @include font(14, 17);
+        font-family: 'Pretendard-Medium';
+        position: relative;
+        width: 25%;
+        padding: 10px;
+        height: 50px;
+        text-align: center;
+        border-bottom: 0.5px solid #ddd;
+        &.tit{
+          width: 50%;
+          text-align: left;
+          padding-left: 40px;
+        }
+        button{
+          @include setCont(20px, 20px, block, absolute);
+          background-color: #e65540;
+          border-radius: 50%;
+          left: 10px;
+          top: 15px;
+          .fa-minus{
+            color: $white;
+          }
+        }
+      }
+    }
+    .table_cont{
+      padding: 60px 0 50px 0;
+      a{
+        display: block;
+        text-align: center;
+      }
+      span{
+        @include font(12, 12, $dark_gray);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-family: 'Pretendard-Regular';
+        &::before{
+          @include setCont(20px, 20px, block, absolute);
+          @include bgSvg(icoPlus(), no-repeat, 50% 50%, 100% auto);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin-top: -20px;
+        }
+      }
+    }
+  }
 }

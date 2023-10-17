@@ -86,7 +86,7 @@
           class="swiper"
           :options="swiperOption"
           >
-            <swiper-slide class="bx_lecture_list animate__animated animate__fadeInDown animate__faster" v-for="item in filterProducts" v-bind:key="item.id">
+            <swiper-slide class="bx_lecture_list" v-for="item in filterProducts" v-bind:key="item.id">
               <router-link :to="item.href" :class="{'one': item.subject === 'one', 'two': item.subject === 'two', 'three': item.subject === 'three', 'four': item.subject === 'four', 'five': item.subject === 'five' }">
                 <div class="img">이미지</div>
                 <div class="bx_tit">
@@ -137,13 +137,13 @@ import "aos/dist/aos.css";
       swiperOption: {
         effect: "coverflow",
         slidesPerView: 1.3,
-        spaceBetween : 20,
+        spaceBetween : 10,
         centeredSlides: true,
         initialSlide: 1,
         coverflowEffect: {
           rotate: 50, 
           stretch: 0, 
-          depth: 100, 
+          depth: 400, 
           modifier: 1, 
           slideShadows: false, 
         },

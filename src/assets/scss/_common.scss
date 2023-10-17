@@ -101,7 +101,7 @@ button, a {
   --animate-duration: 2s;
 }
 .txt_point_line {
-  background: linear-gradient(to top, #FEDE82 50%, transparent 50%);
+  background: linear-gradient(to top, rgba(254, 222, 130, 0.5) 50%, transparent 50%);
 }
 .a_top{
   @include font(18, 20);
@@ -354,7 +354,7 @@ button, a {
 }
 
 .bx_subject_item{
-  @include setCont(100%, 112px, block, relative);
+  @include setCont(100%, 118px, block, relative);
   box-shadow: 0px 0px 10px rgba(67,67,67,0.1);
   border-radius: 10px;
   margin-top: 15px;
@@ -440,23 +440,25 @@ button, a {
 }
 .bx_target{
   li{
-    @include setCont(100%, 65px, block, relative);
+    @include setCont(100%, auto, block, relative);
     box-shadow: 0px 0px 10px rgba(67,67,67,0.1);
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: left;
     padding: 18px 15px;
     p{
       display: flex;
       &:before{
         @include setCont(30px, 30px, block, relative);
-        @include font(12, 12, $black, 600);
+        @include font(12, 12, $black);
+        font-family: 'Pretendard-SemiBold';
         content: '01';
         line-height: 30px;
         text-align: center;
         border-radius: 29px;
         background-color: $yellow;
         margin-right: 12px;
+        margin-top: 8px;
       }
     }
     &:nth-of-type(2){
@@ -500,16 +502,44 @@ button, a {
   }
 }
 
+.bx_list_sub{
+  .list{
+    padding: 20px 0;
+    li{
+      @include font(15, 25, $dark_gray);
+      font-family: 'Pretendard-Regular';
+      text-align: justify;
+    }
+  }
+}
+
 .bx_profile{
   display: flex;
+  align-items: center;
+  padding: 10px 0 35px 0;
   .img{
-    @include setCont(66px, 66px, block, relative);
+    @include setCont(80px, 80px, block, relative);
     @include bg("/parkwon.png", no-repeat, 50% 50%, 100% auto);
     @include blind;
+    &.hochan{
+      @include bg("/hochan.jpg", no-repeat, 50% 50%, 100% auto);
+      border-radius: 50%;
+    }
+    &.shinjong{
+      @include bg("/shinjong.png", no-repeat, 50% 50%, 100% auto);
+      border-radius: 50%;
+    }
   }
   .right{
+    margin-left: 20px;
     h2{
-      @include font(12, 12, $black, 500);
+      @include font(15, 15, $black);
+      font-family: 'Pretendard-SemiBold';
+      margin-bottom: 5px;
+    }
+    p{
+      @include font(15, 18, $black);
+      font-family: 'Pretendard-Medium';
     }
   }
 }
@@ -541,4 +571,78 @@ button, a {
 
 .red {
   color: red;
+}
+
+.tabBlock-tabs{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+  justify-content: space-between;
+  .tabBlock-tab {
+    @include font(16, 16, $black);
+    font-family: 'Pretendard-SemiBold';
+    padding: 10px 25px;
+    position: relative;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out; 
+    &.on{
+      color: $yellow;
+      position: relative;
+      &::before{
+        @include setCont(100%, 3px, block, absolute);
+        background-color: $yellow!important;
+        bottom: -1px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.tabBlock-tab:after {
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-35px 0 0 -35px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    opacity:0;
+  }
+
+.tabBlock-tab:after {
+  background:rgba(254,222,130,0.2);
+}
+
+.tabBlock-tab.button-click:after {
+  animation:anim-effect-a 0.3s forwards;
+  -webkit-animation:anim-effect-a 0.3s forwards;
+}
+
+  
+@-webkit-keyframes anim-effect-a {
+  0% {
+    -webkit-transform:scale3d(0.3,0.3,1);
+  }
+  25%,50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+    -webkit-transform:scale3d(1.2,1.2,1);
+  }
+}
+
+@keyframes anim-effect-a {
+  0% {
+    -webkit-transform:scale3d(0.3,0.3,1);
+  }
+  25%,50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+    -webkit-transform:scale3d(1.2,1.2,1);
+  }
 }

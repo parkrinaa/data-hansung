@@ -3,6 +3,9 @@
     @include setCont(100%, 100%, flex, relative);
     min-height: 100vh;
     flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    touch-action: none;
     .logo{
       @include setCont(100%, 100%, flex, relative);
       @include bg("/login_bg.svg", no-repeat, 50% 50%, 100% auto);
@@ -15,18 +18,23 @@
     }
     .bottom{
       @include setCont(100%, 100%, block, relative);
-      padding: 50px 0;
+      padding: 100px 0;
       flex-shrink: 0;
       text-align: center;
       h1{
-        @include font(20, 20, $black, 600);
+        @include font(23, 23, $black, 600);
+        font-family: 'Pretendard-Bold';
       }
       span{
-        @include font(15, 15, $gray, 400);
+        @include font(17, 17, $gray, 400);
+        font-family: 'Pretendard-SemiBold';
         display: block;
-        margin: 7px 0 35px;
+        margin: 15px 0 35px;
       }
       .btn{
+        @include font(17, 17, $white);
+        font-family: 'Pretendard-Medium';
+        box-shadow: 0 0 20px 2px rgba(0,0,0,0.09);
         width: 200px;
         background: rgb(247,199,0);
         background: linear-gradient(90deg, rgba(247,199,0,1) 0%, rgba(251,159,130,1) 100%);
@@ -326,8 +334,8 @@
       }
       .dl_check{
         dt{
-          @include font(15, 21, $dark_gray, 400);
-          font-family: 'Pretendard-Medium';
+          @include font(15, 21, $black);
+          font-family: 'Pretendard-SemiBold';
           display: flex;
           align-items: center;
           &:before{

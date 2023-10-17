@@ -38,10 +38,10 @@
 }
 
 footer{
-  font-family: 'Pretendard-Regular';
   padding-bottom: 120px;
   .s-text8{
     @include font(14, 20);
+    font-family: 'Pretendard-Medium';
     em{
       color: $black;
     }

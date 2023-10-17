@@ -861,3 +861,72 @@ a {
     }
   }
 }
+
+.qa{
+  h1{
+    @include font(25, 25, $black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Pretendard-Bold';
+    text-align: center;
+    padding-top: 20px;
+    &::before{
+      @include setCont(150px, 110px, block, relative);
+      @include bg("/qa.svg", no-repeat, 50% 50%, 100% auto);
+      margin-bottom: 20px;
+    }
+  }
+  .bx_fold{
+    @include setCont(100%, auto, block, relative);
+    margin-bottom: 30px;
+    .fold_top{
+      @include setCont(100%, 70px, flex, relative);
+      @include font(30, 30, $dark_gray, $bold);
+      font-family: 'Pretendard-SemiBold';
+      padding: 0 20px;
+      border-radius: 100px;
+      align-items: center;
+      box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      background-color: $white;
+      .sign{
+        @include setCont(40px, 40px, block, relative);
+        background-color: $yellow;
+        color: $white;
+        min-width: 40px;
+        border-radius: 50px;
+        margin-right : 10px;
+        text-align: center;
+        line-height: 40px;
+      }
+      h2{
+        @include font(15, 15, $black, 400);
+        font-family: 'Pretendard-SemiBold';
+      }
+    }
+    .fold_content{
+      @include setCont(100%, auto, flex, relative);
+      padding: 80px 30px 30px 30px;
+      background-color: #F8F8F8;
+      border-radius: 30px 30px 20px 20px;
+      margin-top: -50px;
+      transform-origin: top;
+      align-items: baseline;
+      transition: transform .4s ease-out;
+      .sign{
+        @include setCont(20px, 20px, block, relative);
+        background-color: $dark_gray;
+        color: $white;
+        min-width: 20px;
+        border-radius: 50px;
+        margin-right : 10px;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+    .slide-enter, .slide-leave-to{
+      transform: scaleY(0);
+    }
+  }
+}

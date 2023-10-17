@@ -38,6 +38,9 @@ import Package from './views/cartpage/Package.vue'
 import Socialbusiness from './views/cartpage/Socialbusiness.vue'
 import Videodesign from './views/cartpage/Videodesign.vue'
 import Gui from './views/cartpage/Gui.vue'
+// 마이페이지
+import Qa from './views/my/Qa.vue'
+
 
 
 Vue.use(Router)
@@ -238,7 +241,12 @@ export default new Router({
           name: 'features',
           component: Features
         },
-        
+        // 마이페이지
+        {
+          path: '/qa',
+          name: 'qa',
+          component: Qa
+        },
       ],
     },
   ]

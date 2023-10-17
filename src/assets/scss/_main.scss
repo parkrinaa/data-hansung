@@ -189,10 +189,10 @@
             flex-direction: column;
             width: 100%;
             .img{
-              @include setCont(auto, 120px, block);
+              @include setCont(300px, 170px, block);
               @include bg("/step1.png", no-repeat, 50% 50%, 100% auto);
               @include blind;
-              margin: 15px 0;
+              margin: 0 auto;
             }
           }     
         }
@@ -309,4 +309,3 @@
       opacity: 0;
   }
 }
-

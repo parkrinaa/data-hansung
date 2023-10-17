@@ -1,9 +1,9 @@
 <template>
-  <div class="inner course basicstere">
+  <div class="inner course twod">
     <FeaturedProductList />
     <div class="area pr0">
       <div class="a_top">
-        <h2 class="tit">강의 수강자의<br/><b class="txt_point_line">기초입체디자인 결과물</b> 보기</h2>
+        <h2 class="tit">강의 수강자의<br/><b class="txt_point_line">2D컴퓨터그래픽 결과물</b> 보기</h2>
         <button class="btn btn_arrow mr15">더보기</button>
       </div>
       <swiper
@@ -63,9 +63,25 @@
     </div>
     <div class="area">
       <div class="a_top">
-        <h2 class="tit">기초입체디자인 강의와<br /><b class="txt_point_line">비슷한 강의</b>둘러보기</h2>
+        <h2 class="tit">2D컴퓨터그래픽 강의와<br /><b class="txt_point_line">비슷한 강의</b>둘러보기</h2>
       </div>
       <div class="area_bx_subject">
+        <div class="bx_subject_item">
+          <router-link :to="{name: 'threed'}">
+            <div class="subject_top">
+              <h3>3D컴퓨터그래픽</h3>
+              <button class="btn btn_arrow">더보기</button>
+            </div>
+            <div class="area_subject_cont">
+              <ul class="subject_cont">
+                <li>전공선택</li>
+                <li class="grades">3학점</li>
+                <li>3학년</li>
+              </ul>
+              <span>교수진 : 장다윤</span>
+            </div>
+          </router-link>
+        </div>
         <div class="bx_subject_item">
           <router-link :to="{name: 'basicplane'}">
             <div class="subject_top">
@@ -83,25 +99,9 @@
           </router-link>
         </div>
         <div class="bx_subject_item">
-          <router-link :to="{name: 'packegdesign'}">
+          <router-link :to="{name: 'information'}">
             <div class="subject_top">
-              <h3>패키지디자인</h3>
-              <button class="btn btn_arrow">더보기</button>
-            </div>
-            <div class="area_subject_cont">
-              <ul class="subject_cont">
-                <li>전공선택</li>
-                <li class="grades">3학점</li>
-                <li>2학년</li>
-              </ul>
-              <span>교수진 : 전신종</span>
-            </div>
-          </router-link>
-        </div>
-        <div class="bx_subject_item">
-          <router-link :to="{name: 'threed'}">
-            <div class="subject_top">
-              <h3>3D컴퓨터그래픽</h3>
+              <h3>인포메이션디자인</h3>
               <button class="btn btn_arrow">더보기</button>
             </div>
             <div class="area_subject_cont">
@@ -110,7 +110,7 @@
                 <li class="grades">3학점</li>
                 <li>3학년</li>
               </ul>
-              <span>교수진 : 장다윤</span>
+              <span>교수진 : 이호찬</span>
             </div>
           </router-link>
         </div>
@@ -125,7 +125,7 @@ import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: 'hci',
+  name: 'twod',
   components: {
     FeaturedProductList,
     Swiper,

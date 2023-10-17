@@ -1,5 +1,6 @@
 <template>
   <figure class="tabBlock department">
+    <h1 class="top_tit">학과소개</h1>
     <ul class="tabBlock-tabs">
       <li id="0" v-on:click="changeTab" class="tabBlock-tab on">
         학과소개
@@ -133,7 +134,7 @@
               </swiper-slide>
               <swiper-slide>
                 <div class="bx_subject_item">
-                  <router-link :to="{name: 'videodesign'}">
+                  <router-link :to="{name: 'videobesic'}">
                     <div class="subject_top">
                       <h3>영상디자인기초</h3>
                       <button class="btn btn_arrow">더보기</button>
@@ -246,7 +247,7 @@
               </swiper-slide>
               <swiper-slide>
                 <div class="bx_subject_item">
-                  <router-link :to="{name: 'management'}">
+                  <router-link :to="{name: 'menegedesign'}">
                     <div class="subject_top">
                       <h3>디자인매니지먼트</h3>
                       <button class="btn btn_arrow">더보기</button>
@@ -332,7 +333,7 @@
               </swiper-slide>
               <swiper-slide>
                 <div class="bx_subject_item">
-                  <router-link :to="{name: 'package'}">
+                  <router-link :to="{name: 'packegdesign'}">
                     <div class="subject_top">
                       <h3>패키지디자인</h3>
                       <button class="btn btn_arrow">더보기</button>

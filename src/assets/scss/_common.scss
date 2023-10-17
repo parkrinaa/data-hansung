@@ -1,3 +1,11 @@
+h1.top_tit{
+  @include font(25, 25, $black);
+  font-family: 'Pretendard-Bold';
+  text-align: center;
+  margin-bottom: 35px;
+  padding-top: 25px;
+}
+
 h2.tit{
   @include font(18, 23, $black, 500);
   &.large{
@@ -87,7 +95,7 @@ button, a {
   &.btn_arrow{
     @include font(12, 12, #9E9E9E, 400);
     display: flex;
-    align-items: baseline;
+    align-items: center;
     background: transparent;
     padding: 0;
     &:after{
@@ -283,10 +291,10 @@ button, a {
   }
   .right{
     h2{
-      @include font(22, 22, $black, 600);
+      @include font(25, 25, $black);
       font-family: 'Pretendard-Bold';
-      margin: 40px 0 15px;
       text-align: center;
+      margin-bottom: 35px;
     }
     p{
       @include font(16, 20, $black, 400);

@@ -99,7 +99,7 @@
           </router-link>
         </div>
         <div class="bx_subject_item">
-          <router-link :to="{name: 'serviceexperience'}">
+          <router-link :to="{name: 'servicedesign'}">
             <div class="subject_top">
               <h3>서비스경험디자인</h3>
               <button class="btn btn_arrow">더보기</button>

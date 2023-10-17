@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Backbutton />
     <router-view :key="$route.fullPath"/>
     <Footer />
   </div>
@@ -8,6 +9,7 @@
 
 <script>
 import Header from '@/components/Header.vue';
+import Backbutton from '@/components/Backbutton.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
@@ -17,7 +19,8 @@ export default {
   },
   components: {
     Header,
-    Footer
+    Footer,
+    Backbutton
   },
   mounted(){
   }

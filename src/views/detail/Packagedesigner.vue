@@ -49,7 +49,7 @@
           <div :class="['take', isallChange ? 'alltake' : '', isoneChange ? 'onetake' : '', istwoChange ? 'twotake' : '', isthreeChange ? 'threetake' : '']">
             <div class="area_bx_subject take">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'package'}">
+                <router-link :to="{name: 'packegdesign'}">
                   <div class="subject_top">
                     <h3>패키지디자인</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -97,7 +97,7 @@
                 </router-link>
               </div>
               <div class="bx_subject_item">
-                <router-link :to="{name: 'serviceexperience'}">
+                <router-link :to="{name: 'servicedesign'}">
                   <div class="subject_top">
                     <h3>서비스경험디자인</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -113,7 +113,7 @@
                 </router-link>
               </div>
               <div class="bx_subject_item">
-                <router-link :to="{name: 'socialbusiness'}">
+                <router-link :to="{name: 'socialdesign'}">
                   <div class="subject_top">
                     <h3>소셜비즈니스 마케팅</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -148,7 +148,7 @@
                 </router-link>
               </div>
               <div class="bx_subject_item">
-                <router-link :to="{name: 'serviceexperience'}">
+                <router-link :to="{name: 'servicedesign'}">
                   <div class="subject_top">
                     <h3>서비스경험디자인</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -170,7 +170,7 @@
             <!-- 전공선택 -->
             <div class="area_bx_subject bx_threetake">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'package'}">
+                <router-link :to="{name: 'packegdesign'}">
                   <div class="subject_top">
                     <h3>패키지디자인</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -202,7 +202,7 @@
                 </router-link>
               </div>
               <div class="bx_subject_item">
-                <router-link :to="{name: 'socialbusiness'}">
+                <router-link :to="{name: 'socialdesign'}">
                   <div class="subject_top">
                     <h3>소셜비즈니스 마케팅</h3>
                     <button class="btn btn_arrow">더보기</button>

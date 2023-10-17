@@ -83,7 +83,7 @@
           </router-link>
         </div>
         <div class="bx_subject_item">
-          <router-link :to="{name: 'management'}">
+          <router-link :to="{name: 'menegedesign'}">
             <div class="subject_top">
               <h3>디자인매니지먼트</h3>
               <button class="btn btn_arrow">더보기</button>
@@ -99,7 +99,7 @@
           </router-link>
         </div>
         <div class="bx_subject_item">
-          <router-link :to="{name: 'twod'}">
+          <router-link :to="{name: 'twodesign'}">
             <div class="subject_top">
               <h3>2D컴퓨터그래픽</h3>
               <button class="btn btn_arrow">더보기</button>

@@ -1,5 +1,6 @@
 <template>
   <div class="inner course basicplane">
+    
     <FeaturedProductList />
     <div class="area pr0">
       <div class="a_top">
@@ -99,7 +100,7 @@
           </router-link>
         </div>
         <div class="bx_subject_item">
-          <router-link :to="{name: 'twod'}">
+          <router-link :to="{name: 'twodesign'}">
             <div class="subject_top">
               <h3>2D컴퓨터그래픽</h3>
               <button class="btn btn_arrow">더보기</button>

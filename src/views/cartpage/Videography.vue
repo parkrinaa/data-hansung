@@ -83,7 +83,7 @@
           </router-link>
         </div>
         <div class="bx_subject_item">
-          <router-link :to="{name: 'videodesign'}">
+          <router-link :to="{name: 'videobesic'}">
             <div class="subject_top">
               <h3>영상디자인기초</h3>
               <button class="btn btn_arrow">더보기</button>

@@ -97,7 +97,7 @@
                 </router-link>
               </div>
               <div class="bx_subject_item">
-                <router-link :to="{name: 'twod'}">
+                <router-link :to="{name: 'twodesign'}">
                   <div class="subject_top">
                     <h3>2D컴퓨터그래픽</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -167,7 +167,7 @@
             <!-- 전공기초 -->
             <div class="area_bx_subject bx_twotake">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'twod'}">
+                <router-link :to="{name: 'twodesign'}">
                   <div class="subject_top">
                     <h3>2D컴퓨터그래픽</h3>
                     <button class="btn btn_arrow">더보기</button>

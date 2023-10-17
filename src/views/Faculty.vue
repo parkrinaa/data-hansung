@@ -18,7 +18,7 @@
           <swiper-slide class="animate__animated animate__fadeInDown animate__faster">
             <router-link :to="{name: 'introduct'}">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'package'}">
+                <router-link :to="{name: 'packegdesign'}">
                   <div class="subject_top">
                     <h3>패키지디자인</h3>
                   </div>
@@ -36,7 +36,7 @@
           <swiper-slide class="animate__animated animate__fadeInDown animate__faster animate__delay-1s">
             <router-link :to="{name: 'rpl'}">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'package'}">
+                <router-link :to="{name: 'packegdesign'}">
                   <div class="subject_top">
                     <h3>패키지디자인</h3>
                   </div>
@@ -54,7 +54,7 @@
           <swiper-slide class="animate__animated animate__fadeInDown animate__faster animate__delay-2s">
             <router-link :to="{name: 'DetailView'}">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'package'}">
+                <router-link :to="{name: 'packegdesign'}">
                   <div class="subject_top">
                     <h3>패키지디자인</h3>
                   </div>

@@ -42,6 +42,15 @@ import Gui from './views/cartpage/Gui.vue'
 import Qa from './views/my/Qa.vue'
 
 
+//테스트
+import Twodesign from './views/cartsub/Twodesign.vue'
+import Menegedesign from './views/cartsub/Menegedesign.vue'
+import Servicedesign from './views/cartsub/Servicedesign.vue'
+import Packegdesign from './views/cartsub/Packegdesign.vue'
+import Socialdesign from './views/cartsub/Socialdesign.vue'
+import Videobesic from './views/cartsub/Videobesic.vue'
+
+
 
 Vue.use(Router)
 
@@ -62,6 +71,37 @@ export default new Router({
       name: 'EmptyLayout',
       component: () => import('./views/EmptyLayout.vue'),
       children: [
+        //테스트
+        {
+          path: '/twodesign',
+          name: 'twodesign',
+          component: Twodesign
+        },
+        {
+          path: '/menegedesign',
+          name: 'menegedesign',
+          component: Menegedesign
+        },
+        {
+          path: '/servicedesign',
+          name: 'servicedesign',
+          component: Servicedesign
+        },
+        {
+          path: '/packegdesign',
+          name: 'packegdesign',
+          component: Packegdesign
+        },
+        {
+          path: '/socialdesign',
+          name: 'socialdesign',
+          component: Socialdesign
+        },
+        {
+          path: '/videobesic',
+          name: 'videobesic',
+          component: Videobesic
+        },
         // 장바구니
         {
           path: '/hci',

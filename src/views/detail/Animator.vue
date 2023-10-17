@@ -12,11 +12,11 @@
       </div>
       <div class="area">
         <div class="area_bx_infor">
-          <h2 class="tit large">관련 강의 교과목이<br/><b class="txt_point_line">5개</b> 검색되었어요</h2>
+          <h2 class="tit large">관련 강의 교과목이<br/><b class="txt_point_line">6개</b> 검색되었어요</h2>
           <div class="col3 bx_infor">
             <div class="col">
               <span>전공필수</span>
-              <strong><b>1</b>개</strong>
+              <strong><b>2</b>개</strong>
             </div>
             <div class="col">
               <span>전공기초</span>
@@ -65,7 +65,23 @@
                 </router-link>
               </div>
               <div class="bx_subject_item">
-                <router-link :to="{name: 'twod'}">
+                <router-link :to="{name: 'videobesic'}">
+                  <div class="subject_top">
+                    <h3>영상디자인기초</h3>
+                    <button class="btn btn_arrow">더보기</button>
+                  </div>
+                  <div class="area_subject_cont">
+                    <ul class="subject_cont">
+                      <li>전공필수</li>
+                      <li class="grades">3학점</li>
+                      <li>2학년</li>
+                    </ul>
+                    <span>교수진 : 박원철</span>
+                  </div>
+                </router-link>
+              </div>
+              <div class="bx_subject_item">
+                <router-link :to="{name: 'twodesign'}">
                   <div class="subject_top">
                     <h3>2D컴퓨터그래픽</h3>
                     <button class="btn btn_arrow">더보기</button>
@@ -147,11 +163,27 @@
                   </div>
                 </router-link>
               </div>
+              <div class="bx_subject_item">
+                <router-link :to="{name: 'videobesic'}">
+                  <div class="subject_top">
+                    <h3>영상디자인기초</h3>
+                    <button class="btn btn_arrow">더보기</button>
+                  </div>
+                  <div class="area_subject_cont">
+                    <ul class="subject_cont">
+                      <li>전공필수</li>
+                      <li class="grades">3학점</li>
+                      <li>2학년</li>
+                    </ul>
+                    <span>교수진 : 박원철</span>
+                  </div>
+                </router-link>
+              </div>
             </div>
             <!-- 전공기초 -->
             <div class="area_bx_subject bx_twotake">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'twod'}">
+                <router-link :to="{name: 'twodesign'}">
                   <div class="subject_top">
                     <h3>2D컴퓨터그래픽</h3>
                     <button class="btn btn_arrow">더보기</button>

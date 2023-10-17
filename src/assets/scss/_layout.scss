@@ -201,3 +201,17 @@ footer{
   }
 }
 
+#btn_group{
+  button{
+    @include setCont(30px, 30px, block, absolute);
+    @include blind;
+    left: 20px;
+    top: 25px;
+    z-index: 9999;
+    &::before{
+      @include setCont(13px, 25px, block, relative);
+      @include bgSvg(icoArrow($s_black), no-repeat, 50% 50%, 100% auto);
+      transform: rotate(180deg);
+    }
+  }
+}

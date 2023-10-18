@@ -50,7 +50,7 @@
           </svg>
         </div>
       </router-link>
-        
+      <router-link :to="{name: 'comment'}">
         <div class="icon">
             <svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 512 512">
                 <path d="M256.661,257.323c-135.275,0-245.333,110.059-245.333,245.333c0,5.888,4.779,10.667,10.667,10.667
@@ -62,6 +62,7 @@
       S309.589,213.333,256.661,213.333z" />
             </svg>
         </div>
+      </router-link>
     </div>
 
 

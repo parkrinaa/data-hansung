@@ -40,7 +40,7 @@ import Videodesign from './views/cartpage/Videodesign.vue'
 import Gui from './views/cartpage/Gui.vue'
 // 마이페이지
 import Qa from './views/my/Qa.vue'
-
+import Comment from './views/my/Comment.vue'
 
 //테스트
 import Twodesign from './views/cartsub/Twodesign.vue'
@@ -49,6 +49,7 @@ import Servicedesign from './views/cartsub/Servicedesign.vue'
 import Packegdesign from './views/cartsub/Packegdesign.vue'
 import Socialdesign from './views/cartsub/Socialdesign.vue'
 import Videobesic from './views/cartsub/Videobesic.vue'
+
 
 
 
@@ -71,6 +72,11 @@ export default new Router({
       name: 'EmptyLayout',
       component: () => import('./views/EmptyLayout.vue'),
       children: [
+        {
+          path: '/comment',
+          name: 'comment',
+          component: Comment
+        },
         //테스트
         {
           path: '/twodesign',

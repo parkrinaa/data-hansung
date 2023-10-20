@@ -18,20 +18,8 @@
           </dl>
         </swiper-slide>
         <swiper-slide>
-          <router-link :to="{name: 'DetailView'}">
-            <dl class="bx_list file">
-              <dt>2105088</dt>
-              <dd>김정아</dd>
-            </dl>
-          </router-link>
         </swiper-slide>
         <swiper-slide>
-          <router-link :to="{name: 'DetailView'}">
-            <dl class="bx_list trophy">
-              <dt>2105088</dt>
-              <dd>김정아</dd>
-            </dl>
-          </router-link>
         </swiper-slide>
       </swiper>
     </div>

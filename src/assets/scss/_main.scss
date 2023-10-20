@@ -189,10 +189,12 @@
             flex-direction: column;
             width: 100%;
             .img{
-              @include setCont(300px, 170px, block);
-              @include bg("/step1.png", no-repeat, 50% 50%, 100% auto);
+              @include setCont(100%, auto, block);
+              min-height: 170px;
+              @include bg("/step1_1.png", no-repeat, 50% 50%, 100% auto);
               @include blind;
               margin: 0 auto;
+              margin-bottom: 20px;
             }
           }     
         }

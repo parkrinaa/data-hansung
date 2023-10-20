@@ -674,7 +674,7 @@ a {
       background-color: transparent;
       video{
       width: auto;
-      height: 80%;
+      height: 100%;
       }
       .bx_list{
         text-align: center;
@@ -1115,7 +1115,7 @@ a {
       &:nth-of-type(5){
         .img{
           @include setCont(100%, 100%, block, relative);
-          @include bg("/layout5.png", no-repeat, 50% 50%, 100% auto);
+          @include bg("/layout5.png", no-repeat, 50% 50%, auto 100% );
         }
       }
       &:nth-of-type(6){
@@ -1246,19 +1246,19 @@ a {
       &:nth-of-type(5){
         .img{
           @include setCont(100%, 100%, block, relative);
-          @include bg("/manage5.png", no-repeat, 50% 50%, 100% auto);
+          @include bg("/manage5.png", no-repeat, 50% 50%, auto 100%);
         }
       }
       &:nth-of-type(6){
         .img{
           @include setCont(100%, 100%, block, relative);
-          @include bg("/manage6.png", no-repeat, 50% 50%, 100% auto);
+          @include bg("/manage6.png", no-repeat, 50% 50%, auto 100%);
         }
       }
       &:nth-of-type(7){
         .img{
           @include setCont(100%, 100%, block, relative);
-          @include bg("/manage7.png", no-repeat, 50% 50%, 100% auto);
+          @include bg("/manage7.png", no-repeat, 50% 50%, auto 100%);
         }
       }
       &:nth-of-type(8){
@@ -1270,13 +1270,13 @@ a {
       &:nth-of-type(9){
         .img{
           @include setCont(100%, 100%, block, relative);
-          @include bg("/manage9.png", no-repeat, 50% 50%, 100% auto);
+          @include bg("/manage9.png", no-repeat, 50% 50%, auto 100%);
         }
       }
       &:nth-of-type(10){
         .img{
           @include setCont(100%, 100%, block, relative);
-          @include bg("/manage10.png", no-repeat, 50% 50%, 100% auto);
+          @include bg("/manage10.png", no-repeat, 50% 50%, auto 100%);
         }
       }
       &:nth-of-type(11){
@@ -1324,7 +1324,7 @@ a {
       &:nth-of-type(18){
         .img{
           @include setCont(100%, 100%, block, relative);
-          @include bg("/manage18.png", no-repeat, 50% 50%, 100% auto);
+          @include bg("/manage18.png", no-repeat, 50% 50%, auto 100%);
         }
       }
     }

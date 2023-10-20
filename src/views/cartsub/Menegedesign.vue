@@ -2,42 +2,64 @@
   <div class="inner course management">
     <FeaturedProductList />
     <div class="area pr0">
-      <div class="a_top">
+      <div class="a_top pb20">
         <h2 class="tit">강의 수강자의<br/><b class="txt_point_line">디자인매니지먼트 결과물</b> 보기</h2>
         <button class="btn btn_arrow mr15">더보기</button>
       </div>
       <swiper
-        class="swiper"
+        class="swiper pb20"
         :options="swiperOption"
         >
         <swiper-slide>
-          <router-link :to="{name: 'DetailView'}">
-            <dl class="bx_list cap">
-              <dt>BEST1</dt>
-              <dd>3학년</dd>
-              <dd>박리나</dd>
-            </dl>
-          </router-link>
+          <div class="img"></div>
         </swiper-slide>
         <swiper-slide>
-          <router-link :to="{name: 'DetailView'}">
-            <dl class="bx_list file">
-              <dt>BEST2</dt>
-              <dd>3학년</dd>
-              <dd>이채원</dd>
-            </dl>
-          </router-link>
+          <div class="img"></div>
         </swiper-slide>
         <swiper-slide>
-          <router-link :to="{name: 'DetailView'}">
-            <dl class="bx_list trophy">
-              <dt>BEST3</dt>
-              <dd>2학년</dd>
-              <dd>김정아</dd>
-            </dl>
-          </router-link>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
         </swiper-slide>
       </swiper>
+      <div class="swiper-pagination pagination_bullet"></div>
     </div>
     <div class="area">
       <div class="a_top">
@@ -56,7 +78,7 @@
         </div>
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
-          <p>“UX방법론 수업듣고 UX디자이너로 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
+          <p>“매니지먼트 수업듣고 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
           <span>- 3학년 박ㅇㅇ -</span>
         </div>
       </div>
@@ -137,8 +159,8 @@ export default {
       search: '',
       swiperOption: {
         effect: "coverflow",
-        slidesPerView: 1.3,
-        spaceBetween : 10,
+        slidesPerView: 1.1,
+        spaceBetween : 0,
         centeredSlides: true,
         initialSlide: 1,
         coverflowEffect: {
@@ -147,6 +169,15 @@ export default {
           depth: 300, 
           modifier: 1,
           slideShadows: false, 
+        },
+        pagination: {   //페이징 사용자 설정
+          el: ".pagination_bullet",   //페이징 태그 클래스 설정 
+          clickable: true,    //버튼 클릭 여부
+          type : 'bullets',   //페이징 타입 설정(종류: bullets, fraction, progressbar)   
+          // Bullet Numbering 설정
+          // renderBullet: function (index, className) {
+          //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+          // },
         },
         autoplay : {
           delay : 3000,

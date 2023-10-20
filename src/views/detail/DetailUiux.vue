@@ -49,38 +49,6 @@
           <div :class="['take', isallChange ? 'alltake' : '', isoneChange ? 'onetake' : '', istwoChange ? 'twotake' : '', isthreeChange ? 'threetake' : '']">
             <div class="area_bx_subject take">
               <div class="bx_subject_item">
-                <router-link :to="{name: 'servicedesign'}">
-                  <div class="subject_top">
-                    <h3>서비스경험디자인</h3>
-                    <button class="btn btn_arrow">더보기</button>
-                  </div>
-                  <div class="area_subject_cont">
-                    <ul class="subject_cont">
-                      <li>전공필수</li>
-                      <li class="grades">3학점</li>
-                      <li>3학년</li>
-                    </ul>
-                    <span>교수진 : 송영섭</span>
-                  </div>
-                </router-link>
-              </div>
-              <div class="bx_subject_item">
-                <router-link :to="{name: 'hci'}">
-                  <div class="subject_top">
-                    <h3>HCI개론(인터렉션디자인 이해)</h3>
-                    <button class="btn btn_arrow">더보기</button>
-                  </div>
-                  <div class="area_subject_cont">
-                    <ul class="subject_cont">
-                      <li>전공필수</li>
-                      <li class="grades">3학점</li>
-                      <li>3학년</li>
-                    </ul>
-                    <span>교수진 : 송영섭</span>
-                  </div>
-                </router-link>
-              </div>
-              <div class="bx_subject_item">
                 <router-link :to="{name: 'prototyping'}">
                   <div class="subject_top">
                     <h3>사용자경험 프로토타이핑</h3>
@@ -109,6 +77,38 @@
                       <li>2학년</li>
                     </ul>
                     <span>교수진 : 박원철</span>
+                  </div>
+                </router-link>
+              </div>
+              <div class="bx_subject_item">
+                <router-link :to="{name: 'servicedesign'}">
+                  <div class="subject_top">
+                    <h3>서비스경험디자인</h3>
+                    <button class="btn btn_arrow">더보기</button>
+                  </div>
+                  <div class="area_subject_cont">
+                    <ul class="subject_cont">
+                      <li>전공필수</li>
+                      <li class="grades">3학점</li>
+                      <li>3학년</li>
+                    </ul>
+                    <span>교수진 : 송영섭</span>
+                  </div>
+                </router-link>
+              </div>
+              <div class="bx_subject_item">
+                <router-link :to="{name: 'hci'}">
+                  <div class="subject_top">
+                    <h3>HCI개론(인터렉션디자인 이해)</h3>
+                    <button class="btn btn_arrow">더보기</button>
+                  </div>
+                  <div class="area_subject_cont">
+                    <ul class="subject_cont">
+                      <li>전공필수</li>
+                      <li class="grades">3학점</li>
+                      <li>3학년</li>
+                    </ul>
+                    <span>교수진 : 송영섭</span>
                   </div>
                 </router-link>
               </div>

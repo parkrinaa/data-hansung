@@ -30,7 +30,7 @@
               </div>
             </div>
             <div class="s_cont">
-              <p>여러 직업군을 확인하여 <br/> 관심 진로를 확인해보세요.</p>
+              <p>여러 직업군을 확인하여 <br/> 관심 진로를 탐색해 보세요.</p>
               <div class="img">이미지</div>
               <button @click="handleClick">확인하기</button>
             </div>
@@ -77,7 +77,7 @@
           </div>
         </div>
         <div class="pt30 pl20 pr20 pb0 bx_step" ref="targetRef">
-          <h2 class="pb10">여러 직업군을 확인하여<br/><b class="txt_point_line">관심 진로를</b> 확인해보세요.</h2>
+          <h2 class="pb10">여러 직업군을 확인하여<br/><b class="txt_point_line">관심 진로를</b> 탐색해 보세요.</h2>
           <div class="search_bar">
             <input type="search" v-model="search" placeholder="검색어를 입력하세요." onfocus="this.placeholder = ''" class="ipt">
           </div>
@@ -161,7 +161,7 @@ import "aos/dist/aos.css";
           vegan: false,
         },
         {
-          name: '그래픽 디자이너',
+          name: '편집 디자이너',
           sub: '어떤 메시지의 시각적 전달을 목적으로 한 시각 디자인 중에서 주로 인쇄물 등을 위한 평면적 표현의 인쇄기술을 적용하여 다양한 제품에 문양을 그리거나 광고, 패키지, 책표지, 카탈로그 등을 창작 및 제작하는 데 관련된 업무를 수행하는 사람',
           href: '/detailgraphic',
           subject: 'two',

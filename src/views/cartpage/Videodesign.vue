@@ -56,7 +56,7 @@
         </div>
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
-          <p>“UX방법론 수업듣고 UX디자이너로 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
+          <p>“UX방법론 수업듣고 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
           <span>- 3학년 박ㅇㅇ -</span>
         </div>
       </div>

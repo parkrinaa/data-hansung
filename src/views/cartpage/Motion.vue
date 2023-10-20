@@ -11,28 +11,24 @@
         :options="swiperOption"
         >
         <swiper-slide>
-          <router-link :to="{name: 'DetailView'}">
-            <dl class="bx_list cap">
-              <dt>BEST1</dt>
-              <dd>3학년</dd>
-              <dd>박리나</dd>
-            </dl>
-          </router-link>
+          <video src="video/motion_one.mp4" autoplay muted loop data-keepplaying></video>
+          <dl class="bx_list file">
+            <dt>2105088</dt>
+            <dd>김정아</dd>
+          </dl>
         </swiper-slide>
         <swiper-slide>
           <router-link :to="{name: 'DetailView'}">
             <dl class="bx_list file">
-              <dt>BEST2</dt>
-              <dd>3학년</dd>
-              <dd>이채원</dd>
+              <dt>2105088</dt>
+              <dd>김정아</dd>
             </dl>
           </router-link>
         </swiper-slide>
         <swiper-slide>
           <router-link :to="{name: 'DetailView'}">
             <dl class="bx_list trophy">
-              <dt>BEST3</dt>
-              <dd>2학년</dd>
+              <dt>2105088</dt>
               <dd>김정아</dd>
             </dl>
           </router-link>
@@ -47,17 +43,17 @@
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
           <p>“이번 수업을 통해 많은 지식을 얻을 수 있었어요.<br />최고 최고!! 짱짱!! 또 듣고싶습니다!”</p>
-          <span>- 3학년 박ㅇㅇ -</span>
+          <span>- 박ㅇㅇ -</span>
         </div>
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
           <p>“무대를 찢어 놓으셨다. 교수님 정말 사랑합니다.”</p>
-          <span>- 3학년 최ㅇㅇ -</span>
+          <span>- 최ㅇㅇ -</span>
         </div>
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
-          <p>“UX방법론 수업듣고 UX디자이너로 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
-          <span>- 3학년 박ㅇㅇ -</span>
+          <p>“모션그래픽 수업듣고 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
+          <span>- 임ㅇㅇ -</span>
         </div>
       </div>
     </div>
@@ -137,10 +133,9 @@ export default {
       search: '',
       swiperOption: {
         effect: "coverflow",
-        slidesPerView: 1.3,
+        slidesPerView: 1.5,
         spaceBetween : 10,
         centeredSlides: true,
-        initialSlide: 1,
         coverflowEffect: {
           rotate: 50, 
           stretch: 0, 
@@ -148,10 +143,10 @@ export default {
           modifier: 1,
           slideShadows: false, 
         },
-        autoplay : {
-          delay : 3000,
-          disableOnInteraction : false,
-        },
+        // autoplay : {
+        //   delay : 3000,
+        //   disableOnInteraction : false,
+        // },
         loop: 1,
       },
     }

@@ -27,13 +27,11 @@ import Videography from './views/cartpage/Videography.vue'
 import Information from './views/cartpage/Information.vue'
 import Typography from './views/cartpage/Typography.vue'
 import Designeditor from './views/cartpage/Designeditor.vue'
-import Twod from './views/cartpage/Twod.vue'
 import Threed from './views/cartpage/Threed.vue'
 import Methodology from './views/cartpage/Methodology.vue'
 import Basicplane from './views/cartpage/Basicplane.vue'
 import Layoutdesign from './views/cartpage/Layoutdesign.vue'
 import Serviceexperience from './views/cartpage/Serviceexperience.vue'
-import Management from './views/cartpage/Management.vue'
 import Package from './views/cartpage/Package.vue'
 import Socialbusiness from './views/cartpage/Socialbusiness.vue'
 import Videodesign from './views/cartpage/Videodesign.vue'
@@ -210,11 +208,6 @@ export default new Router({
           component: Package
         },
         {
-          path: '/management ',
-          name: 'management',
-          component: Management
-        },
-        {
           path: '/socialbusiness ',
           name: 'socialbusiness',
           component: Socialbusiness
@@ -223,11 +216,6 @@ export default new Router({
           path: '/videodesign ',
           name: 'videodesign',
           component: Videodesign
-        },
-        {
-          path: '/twod ',
-          name: 'twod',
-          component: Twod
         },
         // 상세페이지
         {

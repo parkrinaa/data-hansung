@@ -1,28 +1,6 @@
 <template>
   <div class="inner course motion">
     <FeaturedProductList />
-    <div class="area pr0">
-      <div class="a_top">
-        <h2 class="tit">강의 수강자의<br/><b class="txt_point_line">모션그래픽 결과물</b> 보기</h2>
-        <button class="btn btn_arrow mr15">더보기</button>
-      </div>
-      <swiper
-        class="swiper"
-        :options="swiperOption"
-        >
-        <swiper-slide>
-          <video src="video/motion_one.mp4" autoplay muted loop data-keepplaying></video>
-          <dl class="bx_list file">
-            <dt>2105088</dt>
-            <dd>김정아</dd>
-          </dl>
-        </swiper-slide>
-        <swiper-slide>
-        </swiper-slide>
-        <swiper-slide>
-        </swiper-slide>
-      </swiper>
-    </div>
     <div class="area">
       <div class="a_top">
         <h2 class="tit"><b class="txt_point_line">강의 후기</b></h2>

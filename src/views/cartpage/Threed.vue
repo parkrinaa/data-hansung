@@ -19,6 +19,12 @@
         <swiper-slide>
           <div class="img"></div>
         </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
       </swiper>
       <div class="swiper-pagination pagination_bullet"></div>
     </div>

@@ -147,16 +147,25 @@ export default {
       search: '',
       swiperOption: {
         effect: "coverflow",
-        slidesPerView: 1.3,
-        spaceBetween : 10,
+        slidesPerView: 1.1,
+        spaceBetween : 0,
         centeredSlides: true,
-        initialSlide: 1,
+        // initialSlide: 1,
         coverflowEffect: {
           rotate: 50, 
           stretch: 0, 
           depth: 300, 
           modifier: 1,
-          slideShadows: false, 
+          slideShadows: false,
+        },
+        pagination: {   //페이징 사용자 설정
+          el: ".pagination_bullet",   //페이징 태그 클래스 설정 
+          clickable: true,    //버튼 클릭 여부
+          type : 'bullets',   //페이징 타입 설정(종류: bullets, fraction, progressbar)   
+          // Bullet Numbering 설정
+          // renderBullet: function (index, className) {
+          //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+          // },
         },
         autoplay : {
           delay : 3000,

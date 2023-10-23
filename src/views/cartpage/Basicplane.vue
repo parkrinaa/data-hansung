@@ -112,6 +112,7 @@ export default {
     FeaturedProductList,
     Swiper,
     SwiperSlide,
+
   },
   data() {
     return {

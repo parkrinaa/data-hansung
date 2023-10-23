@@ -139,7 +139,6 @@
 import FeaturedProductList from '@/components/home/FeaturedProductList.vue';
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
-import { Pagination } from 'swiper'
 
 export default {
   name: 'hci',
@@ -162,7 +161,7 @@ export default {
         slidesPerView: 1.1,
         spaceBetween : 0,
         centeredSlides: true,
-        initialSlide: 1,
+        // initialSlide: 1,
         coverflowEffect: {
           rotate: 50, 
           stretch: 0, 

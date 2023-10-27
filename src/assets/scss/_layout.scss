@@ -218,11 +218,11 @@ footer{
     }
   }
   p{
-    @include font(15, 15, $black);
+    @include font(18, 18, $black);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    font-family: 'Pretendard-SemiBold';
+    font-family: 'Pretendard-Bold';
     &::before{
       @include setCont(30px, 30px, block, relative);
       @include bg("/profile.png", no-repeat, 50% 50%, 100% auto);

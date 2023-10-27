@@ -1094,6 +1094,8 @@ $thumb-color: #3b5998;
           @include setCont(110px, 110px, inline-block, absolute);
           @include bg("/t_cont_two.png", no-repeat, 50% 50%, 100% auto);
           bottom: 0;
+          left: 50%;
+          margin-left: -55px;
         }
       }
       &.two{
@@ -1133,6 +1135,21 @@ $thumb-color: #3b5998;
           @include bg("/t_cont_four.png", no-repeat, 50% 50%, 100% auto);
           bottom: -5px;
           right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .area_bx_thema{
+    .bx_thema{
+      .t_cont{
+        padding: 15px;
+        h3{
+          @include font(15, 15, $white);
+          font-family: 'Pretendard-Bold';
+          margin-bottom: 10px;
         }
       }
     }

@@ -7,7 +7,6 @@
     <div class="area pr0">
       <div class="a_top pb20">
         <h2 class="tit">강의 수강자의<br/><b class="txt_point_line">타이포그래피 결과물</b> 보기</h2>
-        <button class="btn btn_arrow mr15">더보기</button>
       </div>
       <swiper
         class="swiper pb20"

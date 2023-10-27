@@ -40,7 +40,7 @@
                     <h3>편집 디자이너</h3>
                     <p>Editorial designer</p>
                   </div>
-                  <div class="t_cont four" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="1000">
+                  <div class="t_cont four" data-aos="zoom-in-up" data-aos-delay="700" data-aos-duration="1000">
                     <h3>패키지 디자이너</h3>
                     <p>Package designer</p>
                   </div>
@@ -93,7 +93,7 @@
         <div class="pt30 pl20 pr20 pb20 bx_step" ref="targetRef">
           <h2 class="pb10">여러 직업군을 확인하여<br/><b class="txt_point_line">관심 진로를</b> 탐색해 보세요.</h2>
           <div class="search_bar">
-            <input type="search" v-model="search" placeholder="검색어를 입력하세요." onfocus="this.placeholder = ''" class="ipt">
+            <input type="search" v-model="search" placeholder="검색어를 입력하세요." onfocus="this.placeholder = '검색어를 입력하세요.'" onblur="검색어를 입력하세요.'" class="ipt">
           </div>
         </div>
         <swiper

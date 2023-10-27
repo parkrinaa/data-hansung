@@ -81,15 +81,15 @@
     background: linear-gradient(to right, #f8d14e 0%,#2ce0bf 19%,#76dd2c 40%,#dba62b 60%,#f9dc56 83%,#f8d14e 100%); 
     background-size: 10000px 100%;
     animation: bg 15s linear infinite ;
-    padding: 60px 0 0 0;
+    padding: 70px 0 0 0;
     #btn_group{
       top: 0px;
     }
     h1{
-      @include font(28, 34);
+      @include font(30, 36);
       position: absolute;
       color: $black;
-      font-family: 'Pretendard-Bold';
+      font-family: 'Pretendard-ExtraBold';
       padding: 10px 25px 0 25px;
     }
     .img{

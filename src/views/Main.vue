@@ -7,7 +7,7 @@
         <div class="profile">
           <p>Hi. rina</p>
         </div>
-      </div> 
+      </div>
         <h1 data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1000">Find your <br/> dream lecture!</h1>
         <div class="img animate__animated animate__fadeIn animate__faster">이미지</div>
       </section>
@@ -223,7 +223,6 @@ import "aos/dist/aos.css";
         this.$router.go(-1); [2]
     },
   },
-  
 };
 
 </script>

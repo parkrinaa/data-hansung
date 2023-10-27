@@ -4,46 +4,90 @@
       <button @click="goBack" type="button">BACK</button>
     </div>
     <FeaturedProductList />
-    <div class="area pr0">
-      <div class="a_top pb20">
-        <h2 class="tit">강의 수강자의<br/><b class="txt_point_line">사진촬영 스튜디오 결과물</b> 보기</h2>
-        <button class="btn btn_arrow mr15">더보기</button>
-      </div>
-      <swiper
-        class="swiper pb20"
-        :options="swiperOption"
-        >
-        <swiper-slide>
-          <div class="img"></div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img"></div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img"></div>
-        </swiper-slide>
-      </swiper>
-      <div class="swiper-pagination pagination_bullet"></div>
-    </div>
     <div class="area">
       <div class="a_top">
         <h2 class="tit"><b class="txt_point_line">강의 후기</b></h2>
       </div>
       <div class="area_bx_review">
         <div class="bx_review">
-          <div class="scope five">별 다섯개</div>
-          <p>“이번 수업을 통해 많은 지식을 얻을 수 있었어요.<br />최고 최고!! 짱짱!! 또 듣고싶습니다!”</p>
-          <span>- 박ㅇㅇ -</span>
+          <div class="r_top">
+            <p>kimsubin12</p>
+          </div>
+          <p>사진촬영 스튜디오 수업 듣고 사진만 보면 저절로 분석하기 시작했다..</p>
+          <div class="t_bottom">
+            <div class="b_left">
+              <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
+            </div>
+            <div class="b_right">
+              <button class="button like rounded">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button class="button thumb rounded">
+                <i class="fa fa-thumbs-up"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="bx_review">
-          <div class="scope five">별 다섯개</div>
-          <p>“무대를 찢어 놓으셨다. 교수님 정말 사랑합니다.”</p>
-          <span>- 최ㅇㅇ -</span>
+          <div class="r_top">
+            <p>wongid_0724</p>
+          </div>
+          <p>사진촬영 스튜디오 수업듣고 취업 성공..<br />수업구성이 너무 알차네요^^!</p>
+          <div class="t_bottom">
+            <div class="b_left">
+              <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
+            </div>
+            <div class="b_right">
+              <button class="button like rounded">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button class="button thumb rounded">
+                <i class="fa fa-thumbs-up"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="bx_review">
-          <div class="scope five">별 다섯개</div>
-          <p>“사진촬영 스튜디오 수업듣고 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
-          <span>- 박ㅇㅇ -</span>
+          <div class="r_top">
+            <p>kimsubin12</p>
+          </div>
+          <p>최고 최고!! 짱짱!! 또 듣고싶습니다!</p>
+          <div class="t_bottom">
+            <div class="b_left">
+              <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
+            </div>
+            <div class="b_right">
+              <button class="button like rounded">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button class="button thumb rounded">
+                <i class="fa fa-thumbs-up"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="todo-container">
+        <div class="list">
+          <div v-for="(item, index) in todoList" :key="item" class="item">
+            <div class="bx_review" data-aos="fade-right" data-aos-duration="1000">
+            <div class="r_top">
+              <p>rina</p>
+              <button @click="removeItem(index)" class="btn btn-sm btn-danger remove">삭제</button>
+            </div>
+            <p>{{ item }}</p>
+            <div class="t_bottom">
+              <div class="b_left">
+                <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <p class="txt_review">어떠셨나요?<br /> <span>따듯한 강의 후기를 남겨보세요</span></p>
+        <div class="controller">
+          <input type="text" v-model="itemInput" @keyup.enter="addItem" placeholder="내용을 입력해주세요."/>
+          <button class="btn btn-primary" @click="addItem" :disabled="isAddBtnDisabled">+</button>
         </div>
       </div>
     </div>
@@ -89,6 +133,8 @@ export default {
     return {
       ref: null,
       search: '',
+      todoList:  [],
+      itemInput: '',  
       swiperOption: {
         effect: "coverflow",
         slidesPerView: 1.1,
@@ -102,20 +148,38 @@ export default {
           modifier: 1,
           slideShadows: false,
         },
-        pagination: {   //페이징 사용자 설정
-          el: ".pagination_bullet",   //페이징 태그 클래스 설정 
-          clickable: true,    //버튼 클릭 여부
-          type : 'bullets',   //페이징 타입 설정(종류: bullets, fraction, progressbar)   
-          // Bullet Numbering 설정
-          // renderBullet: function (index, className) {
-          //   return '<span class="' + className + '">' + (index + 1) + "</span>";
-          // },
-        },
         autoplay : {
           delay : 3000,
           disableOnInteraction : false,
         },
       },
+    }
+  },
+  computed: {
+    isAddBtnDisabled() {
+      return !this.itemInput;
+    },
+    today: function() {
+      var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth()+1; //January is 0!
+      var yyyy = today.getFullYear();
+
+      if(dd<10) {
+          dd = '0'+dd
+      } 
+
+      if(mm<10) {
+          mm = '0'+mm
+      } 
+
+      today = {
+        day: weekday[today.getDay()],
+        date:  mm + '-' + dd + '-' + yyyy,
+      }
+
+      return(today);
     }
   },
   methods: {
@@ -125,6 +189,37 @@ export default {
     goBack(){
         this.$router.go(-1); [2]
     },
+    addItem() {
+      if (this.isAddBtnDisabled) {
+        return;
+      }
+      this.todoList.push(this.itemInput);
+      this.itemInput = '';
+    },
+    removeItem(_index) {
+      this.todoList.splice(_index, 1);
+      // this.todoList = this.todoList.filter((item, index) => index !== _index)
+    },
+  },
+  mounted() {
+    $('.button').click( function() {
+      var $button = $(this);
+      
+      // Button Off
+      if ($button.hasClass('is-active')) {
+        $button
+          .removeClass('is-active');
+        return;
+      }
+      
+      // Button On (with a loader)
+      $button.addClass('is-loading');  
+      setTimeout(function () {
+        $button
+          .removeClass('is-loading')
+          .addClass('is-active');
+      }, 500);
+    });
   }
 }
 

@@ -18,7 +18,7 @@
       </div>
       <div class="area">
         <div class="area_bx_infor">
-          <h2 class="tit large">관련 강의 교과목이<br/><b class="txt_point_line">6개</b> 검색되었어요</h2>
+          <h2 class="tit large">관련 강의 교과목이<br/><b class="txt_point_line">7개</b> 검색되었어요</h2>
           <div class="col3 bx_infor">
             <div class="col">
               <span>전공필수</span>
@@ -30,7 +30,7 @@
             </div>
             <div class="col">
               <span>전공선택</span>
-              <strong><b>2</b>개</strong>
+              <strong><b>3</b>개</strong>
             </div>
           </div>
         </div>
@@ -150,6 +150,22 @@
                   </div>
                 </router-link>
               </div>
+              <div class="bx_subject_item">
+                <router-link :to="{name: 'mediastory'}">
+                  <div class="subject_top">
+                    <h3>미디어스토리텔링 디자인</h3>
+                    <button class="btn btn_arrow">더보기</button>
+                  </div>
+                  <div class="area_subject_cont">
+                    <ul class="subject_cont">
+                      <li>전공선택</li>
+                      <li class="grades">3학점</li>
+                      <li>2학년</li>
+                    </ul>
+                    <span>교수진 : 박원철</span>
+                  </div>
+                </router-link>
+              </div>
             </div>
             <!-- 전공필수 -->
             <div class="area_bx_subject bx_onetake">
@@ -255,6 +271,22 @@
                   </div>
                 </router-link>
               </div>
+              <div class="bx_subject_item">
+                <router-link :to="{name: 'mediastory'}">
+                  <div class="subject_top">
+                    <h3>미디어스토리텔링 디자인</h3>
+                    <button class="btn btn_arrow">더보기</button>
+                  </div>
+                  <div class="area_subject_cont">
+                    <ul class="subject_cont">
+                      <li>전공선택</li>
+                      <li class="grades">3학점</li>
+                      <li>2학년</li>
+                    </ul>
+                    <span>교수진 : 박원철</span>
+                  </div>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
@@ -289,12 +321,8 @@ export default {
   },
   mounted() {
     $('.bx_filt .btns .btn').click( function(){
-      if ( $(this).hasClass('on') ) {
-        $(this).removeClass('on');
-      } else {
-        $('.btns .btn.on').removeClass('on');
-        $(this).addClass('on');    
-      }
+      $('.bx_filt .btns .btn').removeClass('on');
+      $(this).addClass('on');
     });
   }
 }

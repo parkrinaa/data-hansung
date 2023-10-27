@@ -61,6 +61,8 @@ button, a {
   text-align: center;
   flex-shrink: 0;
 }
+
+
 .btn, a.btn {
   @include font(17, 17);
   font-family: 'Pretendard-Regular';
@@ -74,6 +76,9 @@ button, a {
   padding: 13px 45px;
   display: inline-block;
   border-radius: 30px;
+  &.type2{
+    box-shadow: 0 5px 10px rgba(247, 199, 160, 0.8);
+  }
   &:hover {
     background: #FEDE82;
   }
@@ -373,7 +378,7 @@ button, a {
 .bx_subject_item{
   @include setCont(100%, 118px, block, relative);
   box-shadow: 0px 0px 10px rgba(67,67,67,0.1);
-  border-radius: 10px;
+  border-radius: 20px;
   margin-top: 15px;
   a{
     width: 100%;
@@ -428,14 +433,186 @@ button, a {
     border-color: #F7C700!important;
   }
 } 
+
+$like-color: #cc4896;
+$thumb-color: #3b5998;
+
+@mixin button-color($color) {
+  &:before,
+  &:after {
+    color: $color;
+  }
+
+  &.is-active {
+    background: $color;
+  }
+}
 .bx_review{
   box-shadow: 0px 0px 10px rgba(67,67,67,0.1);
-  border-radius: 5px;
+  border-radius: 20px;
   margin-top: 10px;
-  text-align: center;
+  text-align: left;
   flex-direction: column;
   padding: 15px;
   flex-grow: 1;
+  .r_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      @include font(15, 18, $black);
+      font-family: 'Pretendard-Bold';
+      display: flex;
+      align-items: center;
+      margin: 0;
+      &::before{
+        @include setCont(35px, 35px, block, relative);
+        @include bg("/review3.png", no-repeat, 50% 50%, 100% auto);
+        margin-right: 10px;
+      }
+    }
+    .btn{
+      @include setCont(50px, 30px, block, relative);
+      @include font(13, 13, #e65540);
+      font-family: 'Pretendard-SemiBold';
+      border: 1px solid #e65540;
+      padding: 3px 5px;
+      border-radius: 5px;
+      opacity: 0.7;
+    }
+  }
+  &:nth-of-type(1){
+    .r_top{
+      p{
+        &::before{
+          @include bg("/review2.png", no-repeat, 50% 50%, 100% auto);
+        }
+      }
+    }
+  }
+  &:nth-of-type(3){
+    .r_top{
+      p{
+        &::before{
+          @include bg("/review1.png", no-repeat, 50% 50%, 100% auto);
+        }
+      }
+    }
+  }
+  .t_bottom{
+    color: #9E9E9E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+  }
+  /* Reset button */
+  button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+  }
+
+  .button {
+    z-index: 1;
+    margin: .5em;
+    color: #AAB2BD;
+    font-size: 1rem;
+    padding: 2px;
+    min-width: 27px;
+    min-height: 27px;
+    border-radius: .2em;
+    background: lighten(#AAB2BD, 25%);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .1); 
+    outline: none;
+    transition: background ;
+    
+    i {
+      transition: .2s;
+    }
+    &.rounded {
+      border-radius: 2em;
+    }
+    
+    @keyframes loader-animation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* Animation */
+    &.is-active {
+      z-index: 2;
+      color: white;
+      background: #0076FF;
+      animation: .8s;
+      
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -2px;
+        margin-top: -2px;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        transform: scale(0);
+        color: #AAB2BD;
+        border: 1px solid transparent;
+        box-shadow: -.8em 0 0 -2px, .8em 0 0 -2px, 0 -.8em 0 -2px, 0 .8em 0 -2px, -.6em -.6em 0 -2px, -.6em .6em 0 -2px, .6em -.6em 0 -2px, .6em .6em 0 -2px;
+      }   
+    
+      &:before {
+        animation: effect-01-animation .8s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+      }
+      &:after {
+        animation: effect-02-animation .6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+      }
+    }
+    
+    @keyframes effect-01-animation {
+      from { 
+        transform: rotate(-15deg) scale(0); 
+      }
+      40% { 
+        opacity: 1; 
+      }
+      to { 
+        transform: rotate(-30deg) scale(2.5); 
+        opacity: 0;
+      }
+    }
+    
+    @keyframes effect-02-animation {
+      from { 
+        transform: rotate(10deg) scale(0); 
+      }
+      40% { 
+        opacity: 1; 
+      }
+      to { 
+        transform: rotate(30deg) scale(2); 
+        opacity: 0; 
+      }
+    }
+    
+    /* Buttons colors variants */
+    &.like {
+      @include button-color($like-color);
+    }
+    &.thumb {
+      @include button-color($thumb-color);
+    }
+  }
+
   .scope{
     @include setCont(72px, 11px, block, relative);
     @include bgSvg(icoFiveStar(), no-repeat, 50% 50%, 100% auto);
@@ -445,9 +622,10 @@ button, a {
     flex-grow: 1;
   }
   p{
-    @include font(15, 18, $black);
+    @include font(15, 18, $dark_gray);
     font-family: 'Pretendard-Medium';
     flex-grow: 1;
+    margin-top: 10px
   }
   span{
     @include font(14, 14, $dis, 400);
@@ -455,6 +633,62 @@ button, a {
     display: inline-block;
     flex-grow: 1;
     margin-top: 10px;
+  }
+}
+.todo-container{
+  .txt_review{
+    @include font(17, 17, $black);
+    font-family: 'Pretendard-Bold';
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+    padding: 20px 0 0 0;
+    span{
+      @include font(14, 14, $dark_gray);
+      display: block;
+      font-family: 'Pretendard-Medium';
+      margin-top: 5px;
+    }
+  }
+  .bx_review{
+    .r_top{
+      p{
+        &::before{
+          @include bg("/profile.png", no-repeat, 50% 50%, 100% auto);
+        }
+      }
+    }
+  }
+  .controller{
+    display: flex;
+    &::before{
+      @include setCont(50px, 50px, block, relative);
+      @include bg("/profile.png", no-repeat, 50% 50%, 100% auto);
+      margin-right: 10px
+    }
+    input{
+      @include font(17, 17, $black);
+      font-family: 'Pretendard-Medium';
+      padding: 0.2em 1em;
+      background-color: #F8F8F8;
+      border-radius: 20px 0 0 20px;
+      width: 80%;
+      &::placeholder{
+        @include font(13, 13, $black);
+        font-family: 'Pretendard-Medium';
+        color: #cecece;
+      }
+    }
+    button{
+      background: $yellow;
+      color: #fefefe;
+      width: 20%;
+      border-color: #ddd;
+      padding: 0;
+      border-radius: 0 20px 20px 0;
+      &:disabled{
+        background: #ddd;
+      }
+    }
   }
 }
 .bx_target{

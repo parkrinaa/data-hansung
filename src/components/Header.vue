@@ -97,7 +97,11 @@ export default {
                 this.classList.add('active')
             }
         }
-    })()
+    })(),
+    $('.icon').click( function(){
+      $('.icon').removeClass('active');
+      $(this).addClass('active');
+    });
   },
 };
 </script>

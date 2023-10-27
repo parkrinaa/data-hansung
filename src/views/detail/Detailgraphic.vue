@@ -321,12 +321,8 @@ export default {
   },
   mounted() {
     $('.bx_filt .btns .btn').click( function(){
-      if ( $(this).hasClass('on') ) {
-        $(this).removeClass('on');
-      } else {
-        $('.btns .btn.on').removeClass('on');
-        $(this).addClass('on');    
-      }
+      $('.bx_filt .btns .btn').removeClass('on');
+      $(this).addClass('on');
     });
   }
 }

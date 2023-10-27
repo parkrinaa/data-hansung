@@ -30,9 +30,7 @@ import Methodology from './views/cartpage/Methodology.vue'
 import Basicplane from './views/cartpage/Basicplane.vue'
 import Layoutdesign from './views/cartpage/Layoutdesign.vue'
 import Serviceexperience from './views/cartpage/Serviceexperience.vue'
-import Package from './views/cartpage/Package.vue'
 import Socialbusiness from './views/cartpage/Socialbusiness.vue'
-import Videodesign from './views/cartpage/Videodesign.vue'
 import Gui from './views/cartpage/Gui.vue'
 // 마이페이지
 import Qa from './views/my/Qa.vue'
@@ -201,19 +199,9 @@ export default new Router({
           component: Serviceexperience
         },
         {
-          path: '/package ',
-          name: 'package',
-          component: Package
-        },
-        {
           path: '/socialbusiness ',
           name: 'socialbusiness',
           component: Socialbusiness
-        },
-        {
-          path: '/videodesign ',
-          name: 'videodesign',
-          component: Videodesign
         },
         // 상세페이지
         {

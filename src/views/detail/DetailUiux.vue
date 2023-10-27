@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <div class="inner detail uiuxdesign">
+      <div id="btn_group">
+        <button @click="goBack" type="button">BACK</button>
+      </div>
       <div class="area pd0">
         <div class="visual">
           <div class="left animate__animated animate__fadeInDown">UI/UX 디자인 이미지</div>
@@ -275,6 +278,11 @@ export default {
       isActive: true,
       hasError: false
     };
+  },
+  methods: {
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
   mounted() {
     $('.bx_filt .btns .btn').click( function(){

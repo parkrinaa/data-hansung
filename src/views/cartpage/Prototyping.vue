@@ -1,5 +1,8 @@
 <template>
   <div class="inner course prototyping">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div>
     <FeaturedProductList />
     <div class="area pr0">
       <div class="a_top pb20">
@@ -177,7 +180,10 @@ export default {
   methods: {
     addToCart(product) {
       this.$store.dispatch('cart/addItem', product);
-    }
+    },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   }
 }
 

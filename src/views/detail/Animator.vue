@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div class="inner detail animator">
+      <div id="btn_group">
+        <button @click="goBack" type="button">BACK</button>
+      </div>
       <div class="area pd0">
         <div class="visual">
           <div class="left animate__animated animate__fadeInDown">애니메이터 이미지</div>
+          <div class="acce one"></div>
+          <div class="acce two"></div>
+          <div class="acce three"></div>
           <div class="right">
             <h2 class="animate__animated animate__fadeInDown">애니메이터</h2>
             <p class="animate__animated animate__fadeInDown">애니메이터란 영상 만화나 만화 영화를 그리거나 제작하는 사람. 보통 제작진 중에서도 직접적으로 무언가를 움직이는 작화나 CG 애니메이션을 만드는 사람들을 지칭한다.</p>
@@ -275,6 +281,11 @@ export default {
       isActive: true,
       hasError: false
     };
+  },
+  methods: {
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
   mounted() {
     $('.bx_filt .btns .btn').click( function(){

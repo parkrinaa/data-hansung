@@ -1,5 +1,8 @@
 <template>
   <figure class="tabBlock qa">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div>
     <div class="inner">
       <h1>자주 묻는 질문</h1>
       <div class="area">
@@ -98,7 +101,10 @@ export default {
     },
     dropIt5() {
       this.isDropped5 = !this.isDropped5
-    }
+    },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   }
 }
 

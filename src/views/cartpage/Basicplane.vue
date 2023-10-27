@@ -1,5 +1,8 @@
 <template>
   <div class="inner course basicplane">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div>
     <FeaturedProductList />
     <div class="area pr0">
       <div class="a_top pb20">
@@ -9,6 +12,9 @@
         class="swiper pb20"
         :options="swiperOption"
         >
+        <swiper-slide>
+          <div class="img"></div>
+        </swiper-slide>
         <swiper-slide>
           <div class="img"></div>
         </swiper-slide>
@@ -150,7 +156,10 @@ export default {
   methods: {
     addToCart(product) {
       this.$store.dispatch('cart/addItem', product);
-    }
+    },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   }
 }
 

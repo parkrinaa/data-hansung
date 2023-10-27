@@ -1,5 +1,8 @@
 <template>
   <section class="todo-wrapper">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div>
     <h1 class="top_tit">자유게시판</h1>
     <div class="area">
       <div v-if="pending.length > 0">
@@ -138,7 +141,10 @@ export default {
     },
     clearAll() {
       this.todoList = [];
-    }
+    },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
 }
 </script>

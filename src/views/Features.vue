@@ -1,5 +1,8 @@
 <template>
   <div class="container-table-cart pos-relative features">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div> 
     <div class="area">
       <h1>장바구니</h1>
       <div class="f_top">
@@ -19,44 +22,53 @@
         </div>
       </div>
     </div>
-    <div class="area wrap-table-shopping-cart bgwhite">
+    <div class="area wrap-table-shopping-cart">
       <h2 class="tit txt_point_line">나의 장바구니</h2>
-      <table class="table-shopping-cart">
-        <tr class="table-head">
-          <th class="b-radi-left">강의명</th>
-          <th>학점</th>
-          <th class="b-radi-right">학년</th>
-        </tr>
         <template v-for="item in cartItems">
-          <tr class="table-row">
-            <td class="tit">
-              <span>{{ item.title }}</span>
-              <button @click="decrease(item.id)">
-                <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
-              </button>
-            </td>
-            <td>{{ item.price }}학점</td>
-            <td>{{ item.grade }}학년</td>
-            
-          </tr>
+          <div class="bx_subject_item">
+            <div class="bx_item_list">
+              <div class="round"></div>
+              <div class="bx_subject"  data-aos="fade-right" data-aos-duration="1000">
+                <div class="subject_top">
+                  <h3>{{ item.title }}</h3>
+                  <button @click="decrease(item.id)">
+                    삭제
+                  </button>
+                </div>
+                <div class="area_subject_cont">
+                  <p>{{ item.subtitle }}</p>
+                  <ul class="subject_cont">
+                    <li>{{ item.credit }}</li>
+                    <li class="grades">{{ item.price }}학점</li>
+                    <li>{{ item.grade }}학년</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </template>
-        <tr class="plus">
-          <td colspan="4">
-            <div class="table_cont">
+        <div class="bx_subject_item type2">
+          <div class="bx_item_list">
+            <div class="round"></div>
+            <div class="bx_subject">
               <router-link :to="{name: 'main'}">
-                <span>남은 학점 담으러가기!</span>
+                <span class="a_go"><p>남은 학점 담으러가기!</p></span>
               </router-link>
             </div>
-          </td>
-        </tr>
-      </table>
+          </div>
+        </div>
     </div>
   </div>
 </template>
 <script>
-  import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
   export default {
+    created() {
+        AOS.init();
+    },
     computed: {
       ...mapState('cart', {
         cartItems: state => state.items
@@ -75,7 +87,10 @@
       },
       decrease(id) {
         this.$store.dispatch('cart/decreaseQty', id);
-      }
+      },
+      goBack(){
+        this.$router.go(-1); [2]
+      },
     }
   }
 </script>

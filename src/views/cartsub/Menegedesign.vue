@@ -1,5 +1,8 @@
 <template>
   <div class="inner course management">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div>
     <FeaturedProductList />
     <div class="area pr0">
       <div class="a_top pb20">
@@ -69,17 +72,17 @@
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
           <p>“이번 수업을 통해 많은 지식을 얻을 수 있었어요.<br />최고 최고!! 짱짱!! 또 듣고싶습니다!”</p>
-          <span>- 3학년 박ㅇㅇ -</span>
+          <span>- 박ㅇㅇ -</span>
         </div>
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
           <p>“무대를 찢어 놓으셨다. 교수님 정말 사랑합니다.”</p>
-          <span>- 3학년 최ㅇㅇ -</span>
+          <span>- 최ㅇㅇ -</span>
         </div>
         <div class="bx_review">
           <div class="scope five">별 다섯개</div>
           <p>“매니지먼트 수업듣고 취업 성공!<br />한성대학교 들어오길 잘했다!!”</p>
-          <span>- 3학년 박ㅇㅇ -</span>
+          <span>- 박ㅇㅇ -</span>
         </div>
       </div>
     </div>
@@ -190,7 +193,10 @@ export default {
   methods: {
     addToCart(product) {
       this.$store.dispatch('cart/addItem', product);
-    }
+    },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   }
 }
 

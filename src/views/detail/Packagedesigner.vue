@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div class="inner detail package">
+      <div id="btn_group">
+        <button @click="goBack" type="button">BACK</button>
+      </div>
       <div class="area pd0">
         <div class="visual">
           <div class="left animate__animated animate__fadeInDown">패키지디자이너 이미지</div>
+          <div class="acce one"></div>
+          <div class="acce two"></div>
+          <div class="acce three"></div>
           <div class="right">
             <h2 class="animate__animated animate__fadeInDown">패키지디자이너</h2>
             <p class="animate__animated animate__fadeInDown">패키지는 브랜드 이미지를 소비자에게 전달하고 소비자의 구매 의욕을 높이는 역할을 합니다. 패키지 브레인스토밍, 스케치, 프로토타입 제작 등 제품 포장지를 설계하는 업무를 담당하고있습니다.</p>
@@ -243,6 +249,11 @@ export default {
       isActive: true,
       hasError: false
     };
+  },
+  methods: {
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
   mounted() {
     $('.bx_filt .btns .btn').click( function(){

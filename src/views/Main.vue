@@ -2,22 +2,14 @@
   <div id="app">
     <div class="inner main">
       <section class="area a1">
+      <div id="btn_group">
+        <button @click="goBack" type="button">BACK</button>
+        <div class="profile">
+          <p>Hi. rina</p>
+        </div>
+      </div> 
+        <h1 data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1000">Find your <br/> dream lecture!</h1>
         <div class="img animate__animated animate__fadeIn animate__faster">이미지</div>
-        <div class="bx_bubble b1 animate__animated animate__fadeInDown animate__faster">
-            내 학점으로 졸업할 수 있을까?
-          </div>
-          <div class="bx_bubble b2 animate__animated animate__fadeInDown animate__faster animate__delay-1s">
-            UI/UX와 관련된 <br/> 강의는 뭐가 있지?
-          </div>
-          <div class="bx_bubble b3 animate__animated animate__fadeInDown animate__faster animate__delay-2s">
-            졸업 학점이 몇이지?
-          </div>
-          <div class="bx_bubble b4 animate__animated animate__fadeInDown animate__faster animate__delay-3s">
-            알고있는게 없네 나..
-          </div>
-          <div class="bx_bubble b5 animate__animated animate__fadeInDown animate__faster animate__delay-4s">
-            그래픽 수업 <br/> 교수님 정보는?
-          </div>
       </section>
       <section class="a2">
         <div class="bx_step">
@@ -31,8 +23,30 @@
             </div>
             <div class="s_cont">
               <p>여러 직업군을 확인하여 <br/> 관심 진로를 탐색해 보세요.</p>
-              <div class="img">이미지</div>
-              <button @click="handleClick">확인하기</button>
+              <!-- <div class="img">이미지</div> -->
+              <div class="area_bx_thema">
+                <div class="bx_thema">
+                  <div class="t_cont one" data-aos="zoom-in-up">
+                    <h3>UI/UX 디자이너</h3>
+                    <p>User interface <br /> User experience Designer</p>
+                  </div>
+                  <div class="t_cont two" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <h3>애니메이터</h3>
+                    <p>Animator</p>
+                  </div>
+                </div>
+                <div class="bx_thema">
+                  <div class="t_cont three" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+                    <h3>편집 디자이너</h3>
+                    <p>Editorial designer</p>
+                  </div>
+                  <div class="t_cont four" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="1000">
+                    <h3>패키지 디자이너</h3>
+                    <p>Package designer</p>
+                  </div>
+                </div>
+              </div>
+              <button @click="handleClick" class="animate__animated animate__pulse animate__infinite	infinite">확인하기</button>
             </div>
           </div>
           <div class="step s2" data-aos="fade-up" data-aos-duration="3000">
@@ -76,7 +90,7 @@
             <div class="arrows arrow-second"></div>
           </div>
         </div>
-        <div class="pt30 pl20 pr20 pb0 bx_step" ref="targetRef">
+        <div class="pt30 pl20 pr20 pb20 bx_step" ref="targetRef">
           <h2 class="pb10">여러 직업군을 확인하여<br/><b class="txt_point_line">관심 진로를</b> 탐색해 보세요.</h2>
           <div class="search_bar">
             <input type="search" v-model="search" placeholder="검색어를 입력하세요." onfocus="this.placeholder = ''" class="ipt">
@@ -137,15 +151,15 @@ import "aos/dist/aos.css";
       swiperOption: {
         effect: "coverflow",
         slidesPerView: 1.3,
-        spaceBetween : 10,
+        spaceBetween : -20,
         centeredSlides: true,
         initialSlide: 1,
         coverflowEffect: {
           rotate: 50, 
           stretch: 0, 
           depth: 400, 
-          modifier: 1, 
-          slideShadows: false, 
+          modifier: 1,
+          slideShadows: true, 
         },
         // autoplay : {
         //   delay : 3000,
@@ -161,9 +175,9 @@ import "aos/dist/aos.css";
           vegan: false,
         },
         {
-          name: '편집 디자이너',
-          sub: '어떤 메시지의 시각적 전달을 목적으로 한 시각 디자인 중에서 주로 인쇄물 등을 위한 평면적 표현의 인쇄기술을 적용하여 다양한 제품에 문양을 그리거나 광고, 패키지, 책표지, 카탈로그 등을 창작 및 제작하는 데 관련된 업무를 수행하는 사람',
-          href: '/detailgraphic',
+          name: '패키지디자이너',
+          sub: '패키지 디자이너는 제품에 디자인을 다루는 직업이라고 볼 수 있는데 이사람들은 중요한 정보를 전달하고 품목에 구매력을 부여해야 한다.',
+          href: '/packagedesigner',
           subject: 'two',
           vegan: false
         },
@@ -182,9 +196,9 @@ import "aos/dist/aos.css";
           vegan: false
         },
         {
-          name: '패키지디자이너',
-          sub: '패키지 디자이너는 제품에 디자인을 다루는 직업이라고 볼 수 있는데 이사람들은 중요한 정보를 전달하고 품목에 구매력을 부여해야 한다.',
-          href: '/packagedesigner',
+          name: '편집 디자이너',
+          sub: '어떤 메시지의 시각적 전달을 목적으로 한 시각 디자인 중에서 주로 인쇄물 등을 위한 평면적 표현의 인쇄기술을 적용하여 다양한 제품에 문양을 그리거나 광고, 패키지, 책표지, 카탈로그 등을 창작 및 제작하는 데 관련된 업무를 수행하는 사람',
+          href: '/detailgraphic',
           subject: 'five',
           vegan: false
         },
@@ -205,7 +219,11 @@ import "aos/dist/aos.css";
     handleClick() {
       this.$refs.targetRef.scrollIntoView({ behavior: 'smooth' });
     },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
+  
 };
 
 </script>

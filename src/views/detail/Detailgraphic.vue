@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div class="inner detail graphicdesign">
+      <div id="btn_group">
+        <button @click="goBack" type="button">BACK</button>
+      </div>
       <div class="area pd0">
         <div class="visual">
           <div class="left animate__animated animate__fadeInDown">편집 디자이너 이미지</div>
+          <div class="acce one"></div>
+          <div class="acce two"></div>
+          <div class="acce three"></div>
           <div class="right">
             <h2 class="animate__animated animate__fadeInDown">편집 디자이너</h2>
             <p class="animate__animated animate__fadeInDown">편집 디자이너란 어떤 메시지의 시각적 전달을 목적으로 한 시각 디자인 중에서 주로 인쇄물 등을 위한 평면적 표현의 인쇄기술을 적용하여 다양한 제품에 문양을 그리거나 광고, 패키지, 책표지, 카탈로그 등을 창작 및 제작하는 데 관련된 업무를 수행하는 사람이다.</p>
@@ -307,6 +313,11 @@ export default {
       isActive: true,
       hasError: false
     };
+  },
+  methods: {
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
   mounted() {
     $('.bx_filt .btns .btn').click( function(){

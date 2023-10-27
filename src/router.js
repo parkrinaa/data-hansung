@@ -3,9 +3,7 @@ import Router from 'vue-router'
 import Main from './views/Main.vue'
 import Features from './views/Features';
 import LoginView from './views/LoginView.vue';
-import Introduct from './views/Introduct.vue';
 import Rpl from './views/Rpl.vue';
-import Faculty from './views/Faculty.vue';
 //디테일
 import Detailgraphic from './views/detail/Detailgraphic.vue';
 import DetailUiux from './views/detail/DetailUiux.vue';
@@ -256,19 +254,9 @@ export default new Router({
         },
         // 서브
         {
-          path: '/introduct',
-          name: 'introduct',
-          component: Introduct
-        },
-        {
           path: '/rpl',
           name: 'rpl',
           component: Rpl
-        },
-        {
-          path: '/faculty',
-          name: 'faculty',
-          component: Faculty
         },
         {
           path: '/features',

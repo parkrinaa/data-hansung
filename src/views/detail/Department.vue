@@ -1,5 +1,8 @@
 <template>
   <figure class="tabBlock department">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div> 
     <h1 class="top_tit">학과소개</h1>
     <ul class="tabBlock-tabs">
       <li id="0" v-on:click="changeTab" class="tabBlock-tab on">
@@ -452,7 +455,10 @@ export default {
       this.tabs = this.tabs.map(() => false);
       this.tabs[id] = true;
       console.log(e, "tab changing");
-    }
+    },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
   mounted() {
     $(".tabBlock-tab").on("click",function(){

@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div class="inner detail threedesign">
+      <div id="btn_group">
+        <button @click="goBack" type="button">BACK</button>
+      </div>
       <div class="area pd0">
         <div class="visual">
           <div class="left animate__animated animate__fadeInDown">3D 그래픽 디자이너 이미지</div>
+          <div class="acce one"></div>
+          <div class="acce two"></div>
+          <div class="acce three"></div>
           <div class="right">
             <h2 class="animate__animated animate__fadeInDown">3D 그래픽 디자이너</h2>
             <p classs="animate__animated animate__fadeInDown">3차원(3D) 그래픽 아티스트는 영화, TV 또는 비디오 게임 제작의 캐릭터, 풍경, 배경 및 기타 요소에 사용되는 디지털 애니메이션 또는 푸티지를 디자인합니다. 고요하거나 움직이는 창조물은 높이와 너비 외에도 깊이의 모양을 가지고 있습니다.</p>
@@ -243,6 +249,11 @@ export default {
       isActive: true,
       hasError: false
     };
+  },
+  methods: {
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   },
   mounted() {
     $('.bx_filt .btns .btn').click( function(){

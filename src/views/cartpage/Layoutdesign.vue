@@ -1,5 +1,8 @@
 <template>
   <div class="inner course layoutdesign">
+    <div id="btn_group">
+      <button @click="goBack" type="button">BACK</button>
+    </div>
     <FeaturedProductList />
     <div class="area pr0">
       <div class="a_top pb20">
@@ -161,7 +164,7 @@ export default {
         slidesPerView: 1.1,
         spaceBetween : 0,
         centeredSlides: true,
-        // initialSlide: 1,
+        initialSlide: 2,
         coverflowEffect: {
           rotate: 50, 
           stretch: 0, 
@@ -188,7 +191,10 @@ export default {
   methods: {
     addToCart(product) {
       this.$store.dispatch('cart/addItem', product);
-    }
+    },
+    goBack(){
+        this.$router.go(-1); [2]
+    },
   }
 }
 

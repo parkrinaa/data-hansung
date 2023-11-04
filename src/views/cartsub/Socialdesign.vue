@@ -63,10 +63,12 @@
               <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
             </div>
             <div class="b_right">
-              <button class="button like rounded">
+              <span>{{ like }}</span>
+              <button class="button like rounded" @click.once="increase()">
                 <i class="fa fa-heart"></i>
               </button>
-              <button class="button thumb rounded">
+              <span>{{ like2 }}</span>
+              <button class="button thumb rounded" @click.once="increase2()">
                 <i class="fa fa-thumbs-up"></i>
               </button>
             </div>
@@ -82,10 +84,12 @@
               <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
             </div>
             <div class="b_right">
-              <button class="button like rounded">
+              <span>{{ like3 }}</span>
+              <button class="button like rounded" @click.once="increase3()">
                 <i class="fa fa-heart"></i>
               </button>
-              <button class="button thumb rounded">
+              <span>{{ like4 }}</span>
+              <button class="button thumb rounded" @click.once="increase4()">
                 <i class="fa fa-thumbs-up"></i>
               </button>
             </div>
@@ -93,7 +97,7 @@
         </div>
         <div class="bx_review">
           <div class="r_top">
-            <p>kimsubin12</p>
+            <p>rioooona8</p>
           </div>
           <p>최고 최고!! 짱짱!! 또 듣고싶습니다!</p>
           <div class="t_bottom">
@@ -101,10 +105,12 @@
               <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
             </div>
             <div class="b_right">
-              <button class="button like rounded">
+              <span>{{ like5 }}</span>
+              <button class="button like rounded" @click.once="increase5()">
                 <i class="fa fa-heart"></i>
               </button>
-              <button class="button thumb rounded">
+              <span>{{ like6 }}</span>
+              <button class="button thumb rounded" @click.once="increase6()">
                 <i class="fa fa-thumbs-up"></i>
               </button>
             </div>
@@ -207,6 +213,12 @@ export default {
   },
   data() {
     return {
+      like : 10,
+      like2 : 12,
+      like3 : 21,
+      like4 : 1,
+      like5 : 0,
+      like6 : 5,
       ref: null,
       search: '',
       todoList:  [],
@@ -268,6 +280,24 @@ export default {
     }
   },
   methods: {
+    increase(){ 
+      this.like += 1 
+    },
+    increase2(){ 
+      this.like2 += 1 
+    },
+    increase3(){ 
+      this.like3 += 1 
+    },
+    increase4(){ 
+      this.like4 += 1 
+    },
+    increase5(){ 
+      this.like5 += 1 
+    },
+    increase6(){ 
+      this.like6 += 1 
+    },
     addToCart(product) {
       this.$store.dispatch('cart/addItem', product);
     },
@@ -303,7 +333,7 @@ export default {
         $button
           .removeClass('is-loading')
           .addClass('is-active');
-      }, 500);
+      }, 0);
     });
   }
 }

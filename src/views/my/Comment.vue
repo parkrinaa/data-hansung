@@ -7,14 +7,17 @@
     <div class="area">
       <div v-if="pending.length > 0">
         <p class="status busy">총 <strong>{{ pending.length }}</strong> 의 게시물<span v-if="pending.length>1"></span></p>
-        <TransitionGroup name="todo-item" tag="ul" class="todo-list">
+        <TransitionGroup name="todo-item" tag="ul" class="todo-list bx_review">
           <li v-for="(item, index) in pending" v-bind:key="item.title">
-            <div class="l_left">이미지</div>
+            <div class="r_top">
+              <p><span></span></p>
+            </div>
             <!-- <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="checkbox"> -->
             <div class="l_right">
-              <label v-bind:for="'item_' + item.id"></label>
-              <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
+              <label v-bind:for="'item_' + item.id" class="tit">{{ item.title2 }}</label>
+              <h3></h3>
               <span class="todo-text">{{ item.title }}</span>
+              <span class="date">{{ today.day }} {{ today.date }}</span> <br/>
               <span class="delete" @click="deleteItem(item)">삭제</span>
             </div>
           </li>
@@ -25,7 +28,7 @@
         <p class="status free" v-if="!pending.length" ><img src="https://nourabusoud.github.io/vue-todo-list/images/beer_celebration.svg" alt="celebration">Time to chill!  You have no todos.</p> 
       </transition>  -->
 
-      <div v-if="completed.length > 0 && showComplete">
+      <!-- <div v-if="completed.length > 0 && showComplete">
         <p class="status">Completed tasks: {{ completedPercentage }}</p>
         <TransitionGroup name="todo-item" tag="ul" class="todo-list archived">
           <li v-for="(item, index) in completed" v-bind:key="item.title">
@@ -35,14 +38,22 @@
             <span class="delete" @click="deleteItem(item)">삭제</span>
           </li>
         </TransitionGroup>  
-      </div>  
+      </div>   -->
       <!-- <div class="control-buttons">
         <div class="btn btn-secondary" v-if="completed.length > 0" @click="toggleShowComplete"><span v-if="!showComplete">Show</span><span v-else>Hide</span> Complete</div>
         <div class="btn btn-secondary" v-if="todoList.length > 0" @click="clearAll">Clear All</div>
       </div> -->
       <form @keydown.enter.prevent="" class="bottom_todo">
-        <input type="text" class="input-todo" v-bind:class="{ active: new_todo }" placeholder="내용을 입력해주세요." v-model="new_todo" v-on:keyup.enter="addItem">
-        <div class="btn btn-add" v-bind:class="{ active: new_todo }"  @click="addItem">+</div>
+      <h2>나의 게시글 남기기 <i class="fa fa-commenting" aria-hidden="true"></i></h2>
+        <div class="todo_tit">
+          <p>제목 : </p>
+          <input type="text" class="input-todo" v-bind:class="{ active: new_todo2 }" placeholder="제목을 입력해주세요." v-model="new_todo2" v-on:keyup.enter="addItem">
+        </div>
+        <div class="todo_cont">
+          <p>내용 : </p>
+          <input type="text" class="input-todo title" v-bind:class="{ active: new_todo }" placeholder="내용을 입력해주세요." v-model="new_todo" v-on:keyup.enter="addItem">
+        </div>
+        <div class="btn btn-add" v-bind:class="{ active: new_todo }"  @click="addItem">저장</div>
       </form>
     </div>
     </section>
@@ -125,6 +136,7 @@ export default {
         this.todoList.unshift({
           id: this.todoList.length,
           title: this.new_todo,
+          title2: this.new_todo2,
           done: false,
         });
       }

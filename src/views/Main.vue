@@ -9,7 +9,17 @@
         </div>
       </div>
         <h1 data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1000">Find your <br/> dream lecture!</h1>
-        <div class="img animate__animated animate__fadeIn animate__faster">이미지</div>
+        <!-- <div class="img animate__animated animate__fadeIn animate__faster">이미지</div> -->
+        <!-- rubberBand -->
+        <div class="img_group">
+          <div class="img1 animated bounceIn"></div>
+          <div class="img2 animated bounceIn"></div>
+          <div class="img3 animated bounceIn"></div>
+          <div class="img4 animated bounceIn"></div>
+          <div class="img5 animated bounceIn"></div>
+          <div class="img6 animated bounceIn"></div>
+          <div class="img7"></div>
+        </div>
       </section>
       <section class="a2">
         <div class="bx_step">
@@ -158,13 +168,8 @@ import "aos/dist/aos.css";
           rotate: 50, 
           stretch: 0, 
           depth: 400, 
-          modifier: 1,
-          slideShadows: true, 
-        },
-        // autoplay : {
-        //   delay : 3000,
-        //   disableOnInteraction : false,
-        // },
+          // modifier: 1,
+        }
       },
       products: [
         {

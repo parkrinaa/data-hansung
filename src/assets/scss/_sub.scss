@@ -167,7 +167,7 @@
     .visual{
       .left{
         @include setCont(160px, 179px, block, relative);
-        @include bg("/3d_list.svg", no-repeat, 50% 50%, 100% auto);
+        @include bg("/3d_list.png", no-repeat, 50% 50%, 100% auto);
         @include blind;
         min-width: 96px;
         margin-right: 15px;
@@ -1932,30 +1932,126 @@ a {
   }
   ul.todo-list{
     padding: 0;
-    margin-bottom: 30px;
+    &.bx_review{
+      box-shadow: none;
+      display: flex;
+      flex-direction: column-reverse;
+      span{
+        @include font(15, 23, $dark_gray);
+      }
+    }
   }
   ul.todo-list li{
     width: 100%;
     position: relative;
     list-style-type: none;
-    display: flex;
-    margin: 25px 0;
-    .l_left{
-      @include setCont(35px, 35px, block, relative);
-      @include bgSvg(icoPerson(), no-repeat, 50% 50%, 100% auto);
-      @include blind;
-      margin-right: 10px;
-      margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding: 15px 15px 0 15px;
+    &:nth-last-child(-n+3){
+      .l_right{
+        h3{
+          &::before{
+            @include font(15, 20, $black);
+            font-family: 'Pretendard-SemiBold';
+            content: 'MADE 졸업전시'
+          }
+        }
+        label{
+          display: none;
+        }
+      }
+      .r_top{
+        span{
+          &::before{
+            content: 'kimsubin12'
+          }
+        }
+      }
+    }
+    &:nth-last-child(1){
+      .r_top{
+        p{
+          &::before{
+            @include bg("/review2.png", no-repeat, 50% 50%, 100% auto);
+          }
+        }
+      }
+    }
+    &:nth-last-child(2){
+      .l_right{
+        h3{
+          &::before{
+            content: 'MADE 이름의 숨겨진 뜻!'
+          }
+        }
+      }
+      .r_top{
+        p{
+          &::before{
+            @include bg("/review3.png", no-repeat, 50% 50%, 100% auto);
+          }
+        }
+        span{
+          &::before{
+            content: 'wongid_0724'
+          }
+        }
+      }
+    }
+    &:nth-last-child(3){
+      .l_right{
+        h3{
+          &::before{
+            content: 'MADE 많관부'
+          }
+        }
+      }
+      .r_top{
+        p{
+          &::before{
+            @include bg("/review1.png", no-repeat, 50% 50%, 100% auto);
+          }
+        }
+        span{
+          &::before{
+            content: 'rioooona8'
+          }
+        }
+      }
+    }
+    .r_top{
+      p{
+        margin-bottom: 10px;
+        &::before{
+          @include setCont(35px, 35px, block, relative);
+          @include bg("/profile.png", no-repeat, 50% 50%, 100% auto);
+          margin-right: 10px;
+        }
+        span{
+          &::before{
+            @include font(15, 18, $black);
+            font-family: 'Pretendard-Bold';
+            content: 'rina'
+          }
+        }
+      }
     }
     .l_right{
-      @include font(20, 28, $black);
+      @include font(20, 30, $black);
+      display: flex;
+      flex-direction: column;
       position: relative;
       font-family: 'Pretendard-Medium';
       width: 100%;
-      background: rgba(255, 199, 0, 0.2);
-      padding: 25px;
       overflow: hidden;
-      border-radius: 20px;
+      label{
+        @include font(15, 20, $black);
+        font-family: 'Pretendard-SemiBold';
+        &.tit{
+          margin: 0;
+          margin-top: 10px;
+        }
+      }
       .date{
         @include font(13, 13, $dark_gray);
         font-family: 'Pretendard-Medium';
@@ -1965,14 +2061,12 @@ a {
         @include setCont(60px, auto, block, relative);
         @include font(13, 13, $white);
         font-family: 'Pretendard-Medium';
-        position: absolute;
         transform: translateY(-50%);
-        background-color: #f56468;
+        background-color: #e65540;
         padding: 10px;
         text-align: center;
         border-radius: 5px;
-        right: 20px;
-        top: 50%;
+        margin: 0;
       }
     }
     &:nth-last-child(-n+3){
@@ -1981,37 +2075,63 @@ a {
       }
     }
   }
+  h2{
+    @include font(17, 17, $black);
+    font-family: 'Pretendard-Bold';
+    margin-bottom: 15px;
+  }
   .bottom_todo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding: 30px 15px;
+    p{
+      @include font(15, 15);
+      font-family: 'Pretendard-Medium';
+      padding-top: 15px;
+    }
+    .todo_tit, .todo_cont{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      &.todo_tit{
+       margin-bottom: 10px; 
+      }
+      &.todo_cont{
+        input{
+          min-height: 150px;
+        }
+       }
+    }
     .btn, input {
       @include font(17, 17, $black);
       font-family: 'Pretendard-Medium';
       padding: 0.2em 1em;
-      background-color: #F8F8F8;
-      border-radius: 20px 0 0 20px;
+    }
+    input::placeholder{
+      @include font(13, 13, $black);
+      font-family: 'Pretendard-Medium';
     }
     input[type='text'] {
-      border: 1px solid #ddd; 
-      min-width: 80%;
-      min-height: 110px;
       transition: all ease-in 0.25s;
+      border: 1px solid #ddd!important;
+      border-radius: 15px;
+      height: 50px;
+      width: 85%;
     }
     input::placeholder{
       color: rgba(0,0,0,0.2);
     }
     .btn-add {
-      background: #ddd;
-      color: #fefefe;
-      border-color: #ddd;
-      min-width: 20%;
-      min-height: 110px;
-      line-height: 110px;
-      pointer-events: none;
-      font-size: 2.2em;
-      padding: 0;
-      border-radius: 0 20px 20px 0;
+      @include font(15, 15, $black);
+      font-family: 'Pretendard-SemiBold';
+      box-shadow: 0 5px 10px rgba(255, 229, 160, 0.8);
+      display: block;
+      margin: 0 0 0 auto;;
+      background: $yellow;
+      min-height: 40px;
+      width: 85%;
+      line-height: 40px;
+      border-radius: 50px;
+      margin-top: 15px;
     }
     .btn-add.active{
       background: $yellow;
@@ -2035,29 +2155,4 @@ a {
     opacity: 0;
     transform: translateX(100%);
   }
-}
-
-
-
-
-.black-bg {
-  z-index: 100;
-  width : 1400px; height: 720px;
-  background: rgba(0,0,0,1);
-  position: fixed; top:70px; left:300px; padding: 10px;
-}
-.white-bg {
-  padding: 10px;
-  background: rgba(255,255,255,0.9);
-  border-radius: 20px;
-  margin-top: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.card1
-{
-padding: 10px;
-  background: rgba(240, 231, 218,0.5);
-  color: rgb(100,100,100);
 }

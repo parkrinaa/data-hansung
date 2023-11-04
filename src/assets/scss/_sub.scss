@@ -1,5 +1,6 @@
 .login{
   @include setCont(100%, 100%, block, relative);
+  min-height: 600px;
   overflow: hidden;
   .swiper-container{
     display: flex;
@@ -53,7 +54,7 @@
     }
   }
   .bottom{
-    @include setCont(200px, 60px, flex, fixed);
+    @include setCont(200px, 60px, flex, absolute);
     @include font(20, 20, $white);
     flex-direction: column;
     font-family: 'Pretendard-Bold';

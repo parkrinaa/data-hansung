@@ -25,6 +25,17 @@
   font-weight: 600;
   font-style: normal;
 }
+:root {
+  color-scheme: light only;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #fff !important;
+    background-color: #fff !important;
+  }
+}
 
 .font_yellow{
   color: #f9dc56;

@@ -78,7 +78,7 @@
     @include setCont(100%, auto, block, sticky);
     top: 0;
     display: block;
-    background: linear-gradient(to right, #f8d14e 0%,#2ce0bf 19%,#76dd2c 40%,#dba62b 60%,#f9dc56 83%,#f8d14e 100%); 
+    background: linear-gradient(to right, #f8d14e 0%,#22aaf8 19%,#2ce0bf 40%,#76dd2c 60%,#f9dc56 83%,#f8d14e 100%); 
     background-size: 10000px 100%;
     animation: bg 15s linear infinite ;
     padding: 70px 0 0 0;
@@ -156,7 +156,7 @@
         @include bg("/main_img6.png", no-repeat, 50% 50%, contain);
         z-index: 1000;
         top: 190px;
-        left: 60%;
+        right: 3%;
         transform: translateX(-50%);
         animation-delay: 1.3s;
         -webkit-animation-delay: 1.3s;
